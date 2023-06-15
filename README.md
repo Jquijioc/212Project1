@@ -79,6 +79,6 @@ Sample output given grades:
 | ---- | ------ | ------ | ------ | ------ |
 | Summer Lizarda | | | | |
 | Jonathan Ok | | | | |
-| Joseph Quijioc | ReadMe file | | | |
-| | nothing | | | | 
+| Joseph Quijioc | ReadMe file | 6/15/23 | | |
+| | nothing | test | | | 
 | Amer al Sayari | | | | |

@@ -1,5 +1,5 @@
 # 212 Project 1
-Project members: Summer Lizarda, Jonathan Ok, Amer al Sayari
+Project members: Summer Lizarda, Jonathan Ok, Joseph Quijioc, Amer al Sayari
 
 ## Summary of the Project
 
@@ -60,5 +60,6 @@ Sample output given grades:
 | ---- | ------ | ------ | ------ | ------ |
 | Summer Lizarda | | | | |
 | Jonathan Ok | | | | |
-| Joseph Quijioc | | | | |
+| Joseph Quijioc | ReadMe file | | | |
+| | nothing | | | | 
 | Amer al Sayari | | | | |

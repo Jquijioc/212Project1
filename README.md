@@ -38,6 +38,8 @@ Function and method calls
 
 ## Example outputs
 
+![example output](https://github.com/Jquijioc/212Project1/blob/main/samplePics/testingjpg.jpg)
+
 
 ### Contributions Table
 

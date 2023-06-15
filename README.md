@@ -4,7 +4,8 @@
 
 The premise of this project, from the assignment itself, is to "build a gradebook application to interpret course grades into categorical totals and semester final grades.
 
-
+Viewable outputs of the program should include:
+files: main.cpp, gradebook.cpp, gradebook.h
 
 
 ## Planning of the Project
@@ -14,6 +15,12 @@ Pseudocode
 ``` 
 //test of the code block
 int i = 0;
+
+```
+example pseudocode 2
+
+```
+//put code in between the tics
 
 ```
 

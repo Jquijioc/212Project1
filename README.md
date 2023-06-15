@@ -2,9 +2,9 @@
 
 ## Summary of the Project
 
-The premise of this project, from the assignment itself, is to "build a gradebook application to interpret course grades into categorical totals and semester final grades.
+The premise of this project, from the assignment itself, is to "build a gradebook application to interpret course grades into categorical totals and semester final grades."
 
-Viewable outputs of the program should include:
+The viewable outputs of the program should include:
 files: main.cpp, gradebook.cpp, gradebook.h
 
 

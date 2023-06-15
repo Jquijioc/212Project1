@@ -11,11 +11,30 @@ files: main.cpp, gradebook.cpp, gradebook.h
 
 ## Planning of the Project
 
-Pseudocode
+Pseudocode For Main.cpp
 
 ``` 
-//test of the code block
-int i = 0;
+#include "gradebook.h"
+#include <iostream>
+#include <string>
+#include <vector>
+#include <fstream>
+#include <sstream>
+
+int main(int argc, char* argv[]){
+    
+    //skeleton code for file input and storing the numbers
+    //declare file name as argv1
+    //use ifstream read data from the file
+    //declare vector within a vector to hold courseGrades
+    //declare a string
+    
+    //declare gradeCategory vector to hold grades for each category
+    //use a while loop to read line by line and push back the grades into the gradeCategory vector
+    //stringstream the line
+
+    return 0;
+}
 
 ```
 example pseudocode 2

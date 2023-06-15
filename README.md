@@ -2,6 +2,8 @@
 
 ## Summary of the Project
 
+
+
 ## Planning of the Project
 
 Pseudocode
@@ -31,6 +33,11 @@ flowchart TD
 Command line arguments
 
 Function and method calls
+
+## Runtime Instructions
+
+## Example outputs
+
 
 ### Contributions Table
 

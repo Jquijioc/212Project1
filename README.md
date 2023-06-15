@@ -15,3 +15,7 @@
 
 | Name | Contribution | Started | Ended | Finished by |
 | ---- | ------ | ------ | ------ | ------ |
+| Summer Lizarda | | | | |
+| Jonathan Ok | | | | |
+| Joseph Quijioc | | | | |
+| Amer al Sayari | | | | |

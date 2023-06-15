@@ -48,6 +48,8 @@ Function and method calls
 
 ## Example outputs
 
+Sample output given grades:
+
 ![example output](https://github.com/Jquijioc/212Project1/blob/main/samplePics/testingjpg.jpg)
 
 

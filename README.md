@@ -2,6 +2,9 @@
 
 ## Summary of the Project
 
+The premise of this project, from the assignment itself, is to "build a gradebook application to interpret course grades into categorical totals and semester final grades.
+
+
 
 
 ## Planning of the Project

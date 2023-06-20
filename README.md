@@ -45,6 +45,7 @@ example pseudocode 2
 ```
 //Pseudocode for Gradebook.cpp
 ```
+GetWeightGrades Function
 std::vector<float> Gradebook::GetWeightGrades()
 //initialize a vector to hold all of the weighted grades
 //check if there are grades from the input files
@@ -52,6 +53,17 @@ std::vector<float> Gradebook::GetWeightGrades()
 //divide by max points that can be earned for that category and multiply by the decimal version of the max points that can be earned
 //then push back into our vector to hold all of the weighted grades
 //do this for all categorys
+
+This function adds all the grades in its respective categories and return all grades in the category and gets the total for how much points can be earned
+printGrades function
+void Gradebook::printGrades()
+//initialize a vector and call the GetWeightGrades function
+//Use a for loop to loop through the grades
+//Add the current grade to the total
+//print the current grade while in the loop
+//print total lab grade divided by max points that can be earned
+//calculate the points earned for lab
+
 
 ```
 

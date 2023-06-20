@@ -43,6 +43,17 @@ example pseudocode 2
 //put code in between the tics
 
 ```
+//Pseudocode for Gradebook.cpp
+```
+std::vector<float> Gradebook::GetWeightGrades()
+//initialize a vector to hold all of the weighted grades
+//check if there are grades from the input files
+//for loop to iterate through list
+//divide by max points that can be earned for that category and multiply by the decimal version of the max points that can be earned
+//then push back into our vector to hold all of the weighted grades
+//do this for all categorys
+
+```
 
 Flowchart
 

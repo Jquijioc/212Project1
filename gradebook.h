@@ -7,6 +7,6 @@ class Gradebook{
         Gradebook();
         ~Gradebook();
         void printGrades();
-        void getCategory();
+        void getCategoryTotal();
         std::vector<float> GetWeightGrades();
 };

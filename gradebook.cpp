@@ -115,3 +115,66 @@ void Gradebook::printGrades() {
 
 }
 
+//jon
+//This functions gets the category total and course overall
+void Gradebook::getCategoryTotal(){
+    int totalLab = 0;
+    for(int i = 0; i < labGrades.size(); i++) {
+        totalLab += labGrades[i];
+    }
+    std::cout << "Total Grade for lab:" << " " << totalLab << "/200"<< std::endl;
+
+    int totalAssignment = 0;
+    for(int i = 0; i < assignmentGrades.size(); i++) {
+        totalAssignment += assignmentGrades[i];
+    }
+    std::cout << "Total Grade for Assignment:" << " " << totalAssignment << "/200" << std::endl;
+
+    int totalProj = 0;
+     for(int i = 0; i < projectGrades.size(); i++) {
+        totalProj += projectGrades[i];
+    }
+    std::cout << "Total Grade for Project:" << " " << totalProj << "/500" << std::endl;
+
+    int totalExam = 0;
+     for(int i = 0; i < examGrades.size(); i++) {
+        totalExam += examGrades[i];
+    }
+    std::cout << "Total Grade for Exam:" << " " << totalExam << "/100" << std::endl;
+
+    float totalCourseGrade = totalLab + totalAssignment + totalProj + totalExam;
+    std::cout <<"Final Grade: " << totalCourseGrade << "/1000" << std::endl;
+
+}
+
+//jon
+//This functions gets the category total AND course overall
+void Gradebook::getCategoryTotal(){
+    int totalLab = 0;
+    for(int i = 0; i < labGrades.size(); i++) {
+        totalLab += labGrades[i];
+    }
+    std::cout << "Total Grade for lab:" << " " << totalLab << "/200"<< std::endl;
+
+    int totalAssignment = 0;
+    for(int i = 0; i < assignmentGrades.size(); i++) {
+        totalAssignment += assignmentGrades[i];
+    }
+    std::cout << "Total Grade for Assignment:" << " " << totalAssignment << "/200" << std::endl;
+
+    int totalProj = 0;
+     for(int i = 0; i < projectGrades.size(); i++) {
+        totalProj += projectGrades[i];
+    }
+    std::cout << "Total Grade for Project:" << " " << totalProj << "/500" << std::endl;
+
+    int totalExam = 0;
+     for(int i = 0; i < examGrades.size(); i++) {
+        totalExam += examGrades[i];
+    }
+    std::cout << "Total Grade for Exam:" << " " << totalExam << "/100" << std::endl;
+
+    float totalCourseGrade = totalLab + totalAssignment + totalProj + totalExam;
+    std::cout <<"Final Grade: " << totalCourseGrade << "/1000" << std::endl;
+}
+

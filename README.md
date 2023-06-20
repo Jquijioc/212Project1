@@ -66,7 +66,7 @@ void Gradebook::printGrades()
 
 Returns Total Grades For All Categorys and Course Overall
 getCategorys Totals and Course Overall function
-void Gradebook::getCategory(){
+void Gradebook::getCategoryTotal(){
 //initialize a total variable
 //loop through the categorys
 //add total and the category grades together

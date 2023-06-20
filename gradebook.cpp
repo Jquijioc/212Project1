@@ -56,3 +56,62 @@ std::vector<float> Gradebook::GetWeightGrades() {
     return allGradesWeighted;
 }
 
+//this function adds all the grades in its respective categories and return all grades in the category and gets the total
+//for how much points can be earned
+void Gradebook::printGrades() {
+    std::vector<float> weightedGrades = GetWeightGrades(); // Gets the weighted averages for each category
+
+    std::cout << "LAB GRADES: " << std::endl;
+    int totalLab = 0;
+    for (int i = 0; i < labGrades.size(); i++) {
+        totalLab += labGrades[i];
+        std::cout << labGrades[i] << std::endl;
+    }
+    std::cout << "Total Grade for lab:" << " " << totalLab << "/200" << std::endl;
+    float totalLabPoints = ((weightedGrades[0] / labGrades.size()) * 8) * 100;
+    std::cout << "Points Earned For Labs: " << totalLabPoints << "/20" << std::endl; // Print earned points for labs
+
+    //space between category
+    std::cout << " " << std::endl;
+
+    std::cout << "ASSIGNMENT GRADES: " << std::endl;
+    int totalAssignment = 0;
+    for(int i = 0; i < assignmentGrades.size(); i++) {
+        totalAssignment += assignmentGrades[i];
+        std::cout << assignmentGrades[i] << std::endl;
+    }
+    std::cout << "Total Grade for Assignment:" << " " << totalAssignment << std::endl;
+    float totalAssignmentPoints = weightedGrades[1] * assignmentGrades.size() * 100;
+    std::cout << "Points Earned For Assignments: " << totalAssignmentPoints << "/20" << std::endl; // Print earned points for assignments
+
+    //space between category
+    std::cout << " " << std::endl;
+
+    std::cout << "PROJECT GRADES: " << std::endl;
+    int totalProj = 0;
+    for(int i = 0; i < projectGrades.size(); i++) {
+        totalProj += projectGrades[i];
+        std::cout << projectGrades[i] << std::endl;
+    }
+    std::cout << "Total Grade for Project:" << " " << totalProj << std::endl;
+    float totalProjectPoints = weightedGrades[2] * projectGrades.size() * 100;
+    std::cout << "Points Earned For Projects: " << totalProjectPoints << "/50" << std::endl; // Print earned points for projects
+
+    //space between category
+    std::cout << " " << std::endl;
+
+
+    std::cout << "EXAM GRADES: " << std::endl;
+    int totalExam = 0;
+    for(int i = 0; i < examGrades.size(); i++) {
+        totalExam += examGrades[i];
+        std::cout << examGrades[i] << std::endl;
+    }
+    std::cout << "Total Grade for Exam:" << " " << totalExam << std::endl;
+    float totalExamPoints = weightedGrades[3] * examGrades.size() * 100;
+    std::cout << "Points Earned For Exam: " << totalExamPoints << "/10" << std::endl; // Print earned points for exams
+    //space between category
+    std::cout << " " << std::endl;
+
+}
+

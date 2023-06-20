@@ -6,4 +6,6 @@ class Gradebook{
     public:
         Gradebook();
         ~Gradebook();
+        void printGrades();
+        void getCategory();
 };

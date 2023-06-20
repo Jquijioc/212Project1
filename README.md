@@ -64,6 +64,15 @@ void Gradebook::printGrades()
 //print total lab grade divided by max points that can be earned
 //calculate the points earned for lab
 
+Returns Total Grades For All Categorys and Course Overall
+getCategorys Totals and Course Overall function
+void Gradebook::getCategory(){
+//initialize a total variable
+//loop through the categorys
+//add total and the category grades together
+//initialize totalcoursegrade
+//add all the categorys together
+//print
 
 ```
 

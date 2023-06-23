@@ -24,7 +24,7 @@ int main(int argc, char* argv[]){
       courseGrades.push_back(gradeCategory); // append it to the list of vectors
     }
 
-    Gradebook test(courseGrades[0], courseGrades[1], courseGrades[2], courseGrades[3], courseGrades[0][0]);
+    Gradebook test(courseGrades[0], courseGrades[1], courseGrades[2], courseGrades[3]);
     //test.printGrades();
     test.getCategory();
 

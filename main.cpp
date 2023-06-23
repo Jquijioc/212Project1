@@ -132,7 +132,7 @@ int main(int argc, char* argv[]){
                     //Return all grades.
                     break;
                 case 2:
-                    //Returns only the category totals and course overall.
+                    test.getCategoryTotal();
                     break;
                 case 3:
                     test.getCourseTotal();

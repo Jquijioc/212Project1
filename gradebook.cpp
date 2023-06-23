@@ -184,3 +184,25 @@ void Gradebook::getCategoryTotal(){
     std::cout <<"Final Grade: " << totalCourseGrade << "/1000" << std::endl;
 }
 
+void Gradebook::getCourseTotal(){
+    int courseTotal = 0;
+    for(int i = 0; i < labGrades.size(); i++) {
+        courseTotal += labGrades[i];
+    }
+
+    int totalAssignment = 0;
+    for(int i = 0; i < assignmentGrades.size(); i++) {
+        courseTotal += assignmentGrades[i];
+    }
+
+    int totalProj = 0;
+    for(int i = 0; i < projectGrades.size(); i++) {
+        courseTotal += projectGrades[i];
+    }
+
+    int totalExam = 0;
+    for(int i = 0; i < examGrades.size(); i++) {
+        courseTotal += examGrades[i];
+    }
+    std::cout << courseTotal / 100 << std::endl;
+}

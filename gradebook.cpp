@@ -72,54 +72,85 @@ std::vector<float> Gradebook::GetWeightGrades() {
 //for how much points can be earned
 void Gradebook::printGrades(std::string catname) {
     std::vector<float> weightedGrades = GetWeightGrades(); // Gets the weighted averages for each category
+    float totalCourse = 0;
 
+    //LAB
+    //for loop for total course overall
+    int totalLab = 0;
+    for (int i = 0; i < labGrades.size(); i++) {
+        totalLab += labGrades[i];
+    }
+    float totalLabPoints = ((weightedGrades[0] / labGrades.size()) * 8) * 100;
+    totalCourse += totalLabPoints;
+
+    //Print All Grades in Lab
     if(catname == "lab") {
         std::cout << "LAB GRADES: " << std::endl;
-        int totalLab = 0;
         for (int i = 0; i < labGrades.size(); i++) {
-            totalLab += labGrades[i];
             std::cout << labGrades[i] << std::endl;
         }
         std::cout << "Total Grade for lab:" << " " << totalLab << "/200" << std::endl;
-        float totalLabPoints = ((weightedGrades[0] / labGrades.size()) * 8) * 100;
         std::cout << "Points Earned For Labs: " << totalLabPoints << "/20" << std::endl; // Print earned points for labs
     }
 
+    //ASSIGNMENTS
+    //for loop for total course overall
+    int totalAssignment = 0;
+    for(int i = 0; i < assignmentGrades.size(); i++) {
+        totalAssignment += assignmentGrades[i];
+    }
+    float totalAssignmentPoints = weightedGrades[1] * assignmentGrades.size() * 100;
+    totalCourse += totalAssignmentPoints;
+    //Prints All Grades in Assignment
     if(catname == "assignments"){
         std::cout << "ASSIGNMENT GRADES: " << std::endl;
-        int totalAssignment = 0;
         for(int i = 0; i < assignmentGrades.size(); i++) {
-            totalAssignment += assignmentGrades[i];
             std::cout << assignmentGrades[i] << std::endl;
         }
         std::cout << "Total Grade for Assignment:" << " " << totalAssignment << std::endl;
-        float totalAssignmentPoints = weightedGrades[1] * assignmentGrades.size() * 100;
         std::cout << "Points Earned For Assignments: " << totalAssignmentPoints << "/20" << std::endl; // Print earned points for assignments
     }
 
+    //PROJECTS
+    //for loop for total course overall
+    int totalProj = 0;
+    for(int i = 0; i < projectGrades.size(); i++) {
+        totalProj += projectGrades[i];
+    }
+    float totalProjectPoints = weightedGrades[2] * projectGrades.size() * 100;
+    totalCourse += totalProjectPoints;
+
+    //Prints All Grades in Projects
     if(catname == "projects") {
         std::cout << "PROJECT GRADES: " << std::endl;
-        int totalProj = 0;
         for(int i = 0; i < projectGrades.size(); i++) {
-            totalProj += projectGrades[i];
             std::cout << projectGrades[i] << std::endl;
         }
         std::cout << "Total Grade for Project:" << " " << totalProj << std::endl;
-        float totalProjectPoints = weightedGrades[2] * projectGrades.size() * 100;
         std::cout << "Points Earned For Projects: " << totalProjectPoints << "/50" << std::endl; // Print earned points for projects
     }
 
+    //EXAMS
+    //for loop for total course overall
+    int totalExam = 0;
+    for (int i = 0; i < examGrades.size(); i++) {
+        totalExam += examGrades[i];
+    }
+    float totalExamPoints = weightedGrades[3] * examGrades.size() * 100;
+    totalCourse += totalExamPoints;
+
+    //Prints all Grades in Exams
     if(catname == "exams") {
         std::cout << "EXAM GRADES: " << std::endl;
-        int totalExam = 0;
         for (int i = 0; i < examGrades.size(); i++) {
-            totalExam += examGrades[i];
             std::cout << examGrades[i] << std::endl;
         }
         std::cout << "Total Grade for Exam:" << " " << totalExam << std::endl;
-        float totalExamPoints = weightedGrades[3] * examGrades.size() * 100;
         std::cout << "Points Earned For Exam: " << totalExamPoints << "/10" << std::endl; // Print earned points for exams
     }
+
+    //prints out course overall at the end
+    std::cout << "Total Course Overall: " << totalCourse << std::endl;
 }
 
 //jon

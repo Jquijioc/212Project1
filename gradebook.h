@@ -13,11 +13,10 @@ class Gradebook{
         Gradebook(std::vector<int> labGrades, std::vector<int> assignmentGrades, std::vector<int> projectGrades, std::vector<int> examGrades);
         ~Gradebook();
         void printGrades(int category);
-        void getIndividual();
+        void getIndividual(int category, int number);
         void getCategory();
         void getCategoryTotal();
         void getCourseTotal();
         void getAll();
-        void respectiveGrades();
         std::vector<float> GetWeightGrades();
 };

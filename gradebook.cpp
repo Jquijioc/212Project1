@@ -6,7 +6,7 @@
 //The default unparameterized constructor.
 Gradebook::Gradebook(){
     this->labGrades = {0};
-    this-> assignmentGrades = {0};
+    this->assignmentGrades = {0};
     this->projectGrades = {0};
     this->examGrades = {0};
 }
@@ -15,7 +15,7 @@ Gradebook::Gradebook(){
 Gradebook::Gradebook(std::vector<int> labGrades, std::vector<int> assignmentGrades, std::vector<int> projectGrades, std::vector<int> examGrades){
     //The vectors assume inputs for grades for all assignments, and grades not given yet should be input as 0.
     this->labGrades = labGrades;
-    this-> assignmentGrades = assignmentGrades;
+    this->assignmentGrades = assignmentGrades;
     this->projectGrades = projectGrades;
     this->examGrades = examGrades;
     //The total grade is the total amount of possible points available.
@@ -153,70 +153,6 @@ void Gradebook::printGrades(int category) {
     std::cout << "Total Course Overall: " << totalCourse << std::endl;
 }
 
-//this function returns all the grades in their respective categories and the course overall
-//method 3 by Joseph
-void Gradebook::respectiveGrades() {
-    std::vector<float> weightedGrades = GetWeightGrades(); // Gets the weighted averages for each category
-
-    std::cout << "LAB GRADES: " << std::endl;
-    int totalLab = 0;
-    for (int i = 0; i < labGrades.size(); i++) {
-        totalLab += labGrades[i];
-        std::cout << labGrades[i] << std::endl;
-    }
-
-    //get the weighted lab grades for course overall
-    float totalLabPoints = ((weightedGrades[0] / labGrades.size()) * 8) * 100;
-
-    //space between category
-    std::cout << " " << std::endl;
-
-    std::cout << "ASSIGNMENT GRADES: " << std::endl;
-    int totalAssignment = 0;
-    for(int i = 0; i < assignmentGrades.size(); i++) {
-        totalAssignment += assignmentGrades[i];
-        std::cout << assignmentGrades[i] << std::endl;
-    }
-
-    //get the weighted assignment grades for course overall
-    float totalAssignmentPoints = weightedGrades[1] * assignmentGrades.size() * 100;
-
-    //space between category
-    std::cout << " " << std::endl;
-
-    std::cout << "PROJECT GRADES: " << std::endl;
-    int totalProj = 0;
-    for(int i = 0; i < projectGrades.size(); i++) {
-        totalProj += projectGrades[i];
-        std::cout << projectGrades[i] << std::endl;
-    }
-
-    //get the weighted project grades for course overall
-    float totalProjectPoints = weightedGrades[2] * projectGrades.size() * 100;
-
-
-    //space between category
-    std::cout << " " << std::endl;
-
-    std::cout << "EXAM GRADES: " << std::endl;
-    int totalExam = 0;
-    for(int i = 0; i < examGrades.size(); i++) {
-        totalExam += examGrades[i];
-        std::cout << examGrades[i] << std::endl;
-    }
-
-    //get the weighed exam grades for course overall
-    float totalExamPoints = weightedGrades[3] * examGrades.size() * 100;
-
-    //space between category
-    std::cout << " " << std::endl;
-
-    //now print out the total course overall using weighted categories
-    float courseTotal = totalLabPoints + totalAssignmentPoints + totalExamPoints + totalProjectPoints;
-    std::cout << "Total Course Overall: " << courseTotal << std::endl;
-
-}
-
 //jon
 //This functions gets the category total AND course overall
 void Gradebook::getCategoryTotal(){
@@ -248,25 +184,49 @@ void Gradebook::getCategoryTotal(){
     std::cout <<"Final Grade: " << totalCourseGrade << "/1000" << std::endl;
 }
 
-void Gradebook::getCourseTotal(){
+void Gradebook::getCourseTotal() {
     int courseTotal = 0;
-    for(int i = 0; i < labGrades.size(); i++) {
+    for (int i = 0; i < labGrades.size(); i++) {
         courseTotal += labGrades[i];
     }
 
     int totalAssignment = 0;
-    for(int i = 0; i < assignmentGrades.size(); i++) {
+    for (int i = 0; i < assignmentGrades.size(); i++) {
         courseTotal += assignmentGrades[i];
     }
 
     int totalProj = 0;
-    for(int i = 0; i < projectGrades.size(); i++) {
+    for (int i = 0; i < projectGrades.size(); i++) {
         courseTotal += projectGrades[i];
     }
 
     int totalExam = 0;
-    for(int i = 0; i < examGrades.size(); i++) {
+    for (int i = 0; i < examGrades.size(); i++) {
         courseTotal += examGrades[i];
     }
     std::cout << "Your current course overall out of 100 is: " << courseTotal / 100 << std::endl;
 }
+    //Amer
+    //get invidivual grade functions
+void Gradebook::getIndividual(int category, int number) {
+    int grade;
+    int index = number - 1;
+    switch (category) {
+        case 1:
+            grade = labGrades[index];
+            break;
+        case 2:
+            grade = assignmentGrades[index];
+            break;
+        case 3:
+            grade = projectGrades[index];
+            break;
+        case 4:
+            grade = examGrades[index];
+            break;
+        default:
+            break;
+    }
+    std::cout<< grade <<std::endl;
+}
+

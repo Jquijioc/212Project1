@@ -5,13 +5,25 @@
 
 //The default unparameterized constructor.
 Gradebook::Gradebook(){
-
+    this->labGrades = {0};
+    this-> assignmentGrades = {0};
+    this->projectGrades = {0};
+    this->examGrades = {0};
+    this->totalGrade = 0;
 }
 
 
-//The destructor is unncessary, since we aren't allocating any dynamic memory on the heap.
-Gradebook::~Gradebook(){
+//The parameterized constructor to assign vectors in the Gradebook.
+Gradebook::Gradebook(std::vector<int> labGrades, std::vector<int> assignmentGrades, std::vector<int> projectGrades, std::vector<int> examGrades, int totalGrade){
+     this->labGrades = labGrades;
+     this-> assignmentGrades = assignmentGrades;
+     this->projectGrades = projectGrades;
+     this->examGrades = examGrades;
+     this->totalGrade = totalGrade;
+}
 
+//A destructor method isn't necessary since we aren't allocating any dynamic memory on the heap.
+Gradebook::~Gradebook(){
 }
 
 //Finds the average ****FOR EACH**** assignment in all categorys

@@ -153,6 +153,70 @@ void Gradebook::printGrades(int category) {
     std::cout << "Total Course Overall: " << totalCourse << std::endl;
 }
 
+//this function returns all the grades in their respective categories and the course overall
+//method 3 by Joseph
+void Gradebook::respectiveGrades() {
+    std::vector<float> weightedGrades = GetWeightGrades(); // Gets the weighted averages for each category
+
+    std::cout << "LAB GRADES: " << std::endl;
+    int totalLab = 0;
+    for (int i = 0; i < labGrades.size(); i++) {
+        totalLab += labGrades[i];
+        std::cout << labGrades[i] << std::endl;
+    }
+
+    //get the weighted lab grades for course overall
+    float totalLabPoints = ((weightedGrades[0] / labGrades.size()) * 8) * 100;
+
+    //space between category
+    std::cout << " " << std::endl;
+
+    std::cout << "ASSIGNMENT GRADES: " << std::endl;
+    int totalAssignment = 0;
+    for(int i = 0; i < assignmentGrades.size(); i++) {
+        totalAssignment += assignmentGrades[i];
+        std::cout << assignmentGrades[i] << std::endl;
+    }
+
+    //get the weighted assignment grades for course overall
+    float totalAssignmentPoints = weightedGrades[1] * assignmentGrades.size() * 100;
+
+    //space between category
+    std::cout << " " << std::endl;
+
+    std::cout << "PROJECT GRADES: " << std::endl;
+    int totalProj = 0;
+    for(int i = 0; i < projectGrades.size(); i++) {
+        totalProj += projectGrades[i];
+        std::cout << projectGrades[i] << std::endl;
+    }
+
+    //get the weighted project grades for course overall
+    float totalProjectPoints = weightedGrades[2] * projectGrades.size() * 100;
+
+
+    //space between category
+    std::cout << " " << std::endl;
+
+    std::cout << "EXAM GRADES: " << std::endl;
+    int totalExam = 0;
+    for(int i = 0; i < examGrades.size(); i++) {
+        totalExam += examGrades[i];
+        std::cout << examGrades[i] << std::endl;
+    }
+
+    //get the weighed exam grades for course overall
+    float totalExamPoints = weightedGrades[3] * examGrades.size() * 100;
+
+    //space between category
+    std::cout << " " << std::endl;
+
+    //now print out the total course overall using weighted categories
+    float courseTotal = totalLabPoints + totalAssignmentPoints + totalExamPoints + totalProjectPoints;
+    std::cout << "Total Course Overall: " << courseTotal << std::endl;
+
+}
+
 //jon
 //This functions gets the category total AND course overall
 void Gradebook::getCategoryTotal(){

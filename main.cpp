@@ -54,32 +54,33 @@ int main(int argc, char* argv[]){
 
             switch(cat) {
                 case 1:
-                    if(num < courseGrades[0].size()) {
-                        std::cout << "LAB " << num << " GRADE IS:.." << std::endl;
+                    if(num <= courseGrades[0].size()) {
+                        std::cout << "LAB " << num << " GRADE IS:" ;
                         //Call individual grade function.
+                        test.getIndividual(cat, num);
                     } else {
                         std::cout << "The input individual deliverable number is larger than the amount in the category." << std::endl;
                     }
                     break;
                 case 2:
-                    if(num < courseGrades[1].size()) {
-                        std::cout << "ASSIGNMENT " << num << " GRADE IS:.." << std::endl;
+                    if(num <= courseGrades[1].size()) {
+                        std::cout << "ASSIGNMENT " << num << " GRADE IS:" ;
                         //Call individual grade function.
                     } else {
                         std::cout << "The input individual deliverable number is larger than the amount in the category." << std::endl;
                     }
                     break;
                 case 3:
-                    if(num < courseGrades[2].size()) {
-                        std::cout << "PROJECT " << num << " GRADE IS:.." << std::endl;
+                    if(num <= courseGrades[2].size()) {
+                        std::cout << "PROJECT " << num << " GRADE IS:.." ;
                         //Call individual grade function.
                     } else {
-                        std::cout << "The input individual deliverable number is larger than the amount in the category." << std::endl;
+                        std::cout << "The input individual deliverable number is larger than the amount in the category." ;
                     }
                     break;
                 case 4:
-                    if(num < courseGrades[3].size()) {
-                        std::cout << "EXAM " << num << " GRADE IS:.." << std::endl;
+                    if(num <= courseGrades[3].size()) {
+                        std::cout << "EXAM " << num << " GRADE IS:.." ;
                         //Call individual grade function.
                     } else {
                         std::cout << "The input individual deliverable number is larger than the amount in the category." << std::endl;

@@ -12,7 +12,7 @@ class Gradebook{
         Gradebook();
         Gradebook(std::vector<int> labGrades, std::vector<int> assignmentGrades, std::vector<int> projectGrades, std::vector<int> examGrades);
         ~Gradebook();
-        void printGrades(std::string catname);
+        void printGrades(int category);
         void getIndividual();
         void getCategory();
         void getCategoryTotal();

@@ -15,19 +15,16 @@ int main(int argc, char* argv[]){
     std::string line;
 
     while (std::getline(file, line)){
-      std::stringstream ss(line);
-      std::vector<int> gradeCategory;
-      int temp;
-      while (ss >> temp) {
-        gradeCategory.push_back(temp);
-      }
-      courseGrades.push_back(gradeCategory); // append it to the list of vectors
+        std::stringstream ss(line);
+        std::vector<int> gradeCategory;
+        int temp;
+        while (ss >> temp) {
+            gradeCategory.push_back(temp);
+        }
+        courseGrades.push_back(gradeCategory); // append it to the list of vectors
     }
 
     Gradebook test(courseGrades[0], courseGrades[1], courseGrades[2], courseGrades[3]);
-    
-    //test.printGrades();
-    //test.getCategory();
 
     int inp;
     int cat;
@@ -59,7 +56,7 @@ int main(int argc, char* argv[]){
                 case 1:
                     if(num < courseGrades[0].size()) {
                         std::cout << "LAB " << num << " GRADE IS:.." << std::endl;
-                        //Call individual grade function using cat and num variables.
+                        //Call individual grade function.
                     } else {
                         std::cout << "The input individual deliverable number is larger than the amount in the category." << std::endl;
                     }
@@ -67,7 +64,7 @@ int main(int argc, char* argv[]){
                 case 2:
                     if(num < courseGrades[1].size()) {
                         std::cout << "ASSIGNMENT " << num << " GRADE IS:.." << std::endl;
-                        //Call individual grade function using cat and num variables.
+                        //Call individual grade function.
                     } else {
                         std::cout << "The input individual deliverable number is larger than the amount in the category." << std::endl;
                     }
@@ -75,7 +72,7 @@ int main(int argc, char* argv[]){
                 case 3:
                     if(num < courseGrades[2].size()) {
                         std::cout << "PROJECT " << num << " GRADE IS:.." << std::endl;
-                        //Call individual grade function using cat and num variables.
+                        //Call individual grade function.
                     } else {
                         std::cout << "The input individual deliverable number is larger than the amount in the category." << std::endl;
                     }
@@ -83,7 +80,7 @@ int main(int argc, char* argv[]){
                 case 4:
                     if(num < courseGrades[3].size()) {
                         std::cout << "EXAM " << num << " GRADE IS:.." << std::endl;
-                        //Call individual grade function using cat and num variables.
+                        //Call individual grade function.
                     } else {
                         std::cout << "The input individual deliverable number is larger than the amount in the category." << std::endl;
                     }
@@ -101,18 +98,20 @@ int main(int argc, char* argv[]){
             std::cout << "3: Project" << std::endl;
             std::cout << "4: Exam" << std::endl;
 
+            std::cin >> cat;
+
             switch(cat) {
                 case 1:
-                    //Return all lab grades and category total.
+                    test.printGrades(cat);
                     break;
                 case 2:
-                    //Return all assignment grades and category total.
+                    test.printGrades(cat);
                     break;
                 case 3:
-                    //Return all project grades and category total.
+                    test.printGrades(cat);
                     break;
                 case 4:
-                    //Return all exam grades and category total.
+                    test.printGrades(cat);
                     break;
                 default:
                     std::cout << "An invalid category was input. The program is now exiting.." << std::endl;
@@ -148,7 +147,5 @@ int main(int argc, char* argv[]){
             break;
     }
 
-
-    
     return 0;
 }

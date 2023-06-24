@@ -14,6 +14,7 @@ class Gradebook{
         ~Gradebook();
         void printGrades(int category);
         void getIndividual(int category, int number);
+        void respectiveGrades();
         void getCategory();
         void getCategoryTotal();
         void getCourseTotal();

@@ -129,7 +129,7 @@ int main(int argc, char* argv[]){
 
             switch(cor) {
                 case 1:
-                    //Return all grades.
+                    test.getAll();
                     break;
                 case 2:
                     test.getCategoryTotal();

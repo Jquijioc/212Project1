@@ -162,18 +162,16 @@ The order of the categories is Labs, Assignments, Projects, and then Final.
 
 ### **Warning**
 
-User must fill any missing grades with a zero or else the program will not work.
-
-Example of a working data file:
+User must fill any missing grades with a zero or else the program will not work. Example of a working data file below:
 
 ![datafile](https://github.com/Jquijioc/212Project1/blob/main/samplePics/ExampleData.jpg)
 
 Command line arguments
 
-Command Line arguments follow the form of:
+Command Line arguments follow the form of
 
 ```
-g++ main.cpp gradebook.cpp -o test && ./test
+g++ main.cpp gradebook.cpp -o test && ./test dataset
 ```
 where "dataset" is the name of the file with the user's data
 
@@ -188,9 +186,9 @@ After running the correct commands with the desired file name, users will be pre
 
 ## Example outputs
 
-Sample output given grades:
+Sample output of User requesting 1 individual grade, then 1 for Lab, then the third Lab grade:
 
-![example output](https://github.com/Jquijioc/212Project1/blob/main/samplePics/testingjpg.jpg)
+![example output](https://github.com/Jquijioc/212Project1/blob/main/samplePics/Output1.jpg)
 
 
 ### Contributions Table

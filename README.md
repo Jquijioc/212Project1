@@ -131,11 +131,11 @@ print Flowchart
 ```mermaid
 
 flowchart TD
-    A[take in category, category grade, and category total] --> B[switch statment for user to choose category];
-    B --> C{pick category};
+    A[take in category(cat), category grade(totalCat), and category total (totalCatPoints parameters] --> B[switch statment for user to choose category];
+    B --> C{pick category using parameter cat};
     C --> D[print out Category Grades using for loop];
-    D --> E[print out category grade average];
-    E --> F[print out category total points];
+    D --> E[print out category grade average using given parameter totalCat];
+    E --> F[print out category total points using given parameter totalCatPoints ];
 
 ```
 

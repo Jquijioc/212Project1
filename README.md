@@ -115,6 +115,7 @@ Sample output given grades:
 | Summer Lizarda | pseudocode | 6/15/23 | 6/23/23 | Summer Lizarda |
 | | main.cpp | 6/15/23 | 6/23/23 | Summer Lizarda |
 | | getCourseTotal() | 6/22/23 | 6/23/23 | Summer Lizarda |
+| | comments | 6/24/23 | 6/25/23 | Summer Lizarda |
 | Jonathan Ok | pseudocode | 6/15/23 | 6/23/23 | Jonathan Ok |
 | | gradebook.cpp | 6/15/23 | 6/23/23 | Jonathan Ok |
 | | getCategoryTotal() | 6/15/23 | 6/23/23 | Jonathan Ok |

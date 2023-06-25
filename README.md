@@ -111,7 +111,7 @@ Sample output given grades:
 | ---- | ------ | ------ | ------ | ------ |
 | Summer Lizarda | main.cpp | 6/15/23 | 6/23/23 | Summer Lizarda |
 | | getCourseTotal() | 6/22/23 | 6/23/23 | Summer Lizarda |
-| Jonathan Ok | | | | |
+| Jonathan Ok | pseudocode, gradebook.cpp, getCategoryTotal(), printGrades(), GetWeightGrades()| 6/15/23 | 6/23/23 | Jonathan Ok |
 | Joseph Quijioc | ReadMe file | 6/15/23 | | |
 | | nothing | test | | | 
 | Amer al Sayari | | | | |

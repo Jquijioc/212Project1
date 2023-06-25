@@ -1,3 +1,6 @@
+#ZOOM link
+https://us05web.zoom.us/j/86707749524?pwd=ZE9ZR091ay84ZVh5bUg5MlNWeFg0Zz09
+
 # 212 Project 1
 Project members: Summer Lizarda, Jonathan Ok, Joseph Quijioc, Amer al Sayari
 

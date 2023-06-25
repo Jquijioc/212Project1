@@ -119,10 +119,7 @@ flowchart TD
     E --> I[totalCategory += totalPoints];
     F --> J[totalCategory += totalPoints];
     G --> K[totalCategory += totalPoints];
-    H ---> L[return totalGradePoints];
-    I ---> L[return totalGradePoints];
-    J ---> L[return totalGradePoints];
-    K ---> L[return totalGradePoints];
+  
 
 ```
 

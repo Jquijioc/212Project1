@@ -131,4 +131,4 @@ Sample output given grades:
 | | flowchart | 6/15/23 | | Joseph Quijioc |
 | Amer al Sayari | pseudocode | 6/15/23 | 6/23/23 | Amer al Sayari|
 | | getCategoryNumber() | 6/22/23 | 6/23/23 | Amer al Sayari|
-| | getCategoryNumber() | 6/23/23 | 6/23/23 | Amer al Sayari|
+| | video | 6/23/23 | 6/23/23 | Amer al Sayari|

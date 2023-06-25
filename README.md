@@ -115,12 +115,19 @@ Sample output given grades:
 | | getCourseTotal() | 6/22/23 | 6/23/23 | Summer Lizarda |
 | | comments | 6/24/23 | 6/25/23 | Summer Lizarda |
 | | optimization | 6/17/23 | 6/25/23 | Summer Lizarda |
+| | totalGrade() | 6/17/23 | 6/25/23 | Summer Lizarda |
+| | print() | 6/17/23 | 6/25/23 | Summer Lizarda |
+| | total() | 6/17/23 | 6/25/23 | Summer Lizarda |
 | Jonathan Ok | pseudocode | 6/15/23 | 6/23/23 | Jonathan Ok |
 | | gradebook.cpp | 6/15/23 | 6/23/23 | Jonathan Ok |
 | | getCategoryTotal() | 6/15/23 | 6/23/23 | Jonathan Ok |
 | | printGrades() | 6/15/23 | 6/23/23 | Jonathan Ok |
 | | GetWeightGrades() | 6/15/23 | 6/23/23 | Jonathan Ok |
+| | totalGrade() | 6/17/23 | 6/25/23 | Summer Lizarda |
+| | print() | 6/17/23 | 6/25/23 | Summer Lizarda |
+| | total() | 6/17/23 | 6/25/23 | Summer Lizarda |
 | Joseph Quijioc | pseudocode | 6/15/23 | 6/23/23 | Joseph Quijioc |
 | | readme file | 6/15/23 | | Joseph Quijioc |
 | | flowchart | 6/15/23 | | Joseph Quijioc |
 | Amer al Sayari | pseudocode | 6/15/23 | 6/23/23 | Amer al Sayari|
+| | getCategoryNumber() | 6/15/23 | 6/23/23 | Amer al Sayari|

@@ -16,14 +16,14 @@ int main(int argc, char* argv[]){
     while (std::getline(file, line)){
         std::stringstream ss(line);
         std::vector<int> gradeCategory;
-        std::string firstString;  // Add a variable to store the first string
-        ss >> firstString;  // Read and ignore the first string
+        std::string firstString;  //Add a variable to store the first string (for readability, labeling).
+        ss >> firstString;  //Read and ignore the first string.
 
         int temp;
         while (ss >> temp) {
             gradeCategory.push_back(temp);
         }
-        courseGrades.push_back(gradeCategory); // append it to the list of vectors
+        courseGrades.push_back(gradeCategory); // Append it to the list of vectors.
     }
 
     Gradebook test(courseGrades[0], courseGrades[1], courseGrades[2], courseGrades[3]);
@@ -40,6 +40,7 @@ int main(int argc, char* argv[]){
 
     std::cin >> inp;
 
+    //The switch statement alters the menu based on the requisite category selected.
     switch(inp) {
         case 1:
             cat = test.getCategoryNumber();

@@ -14,10 +14,10 @@ class Gradebook{
         ~Gradebook();
         void printGrades(int category);
         void getIndividual(int category, int number);
-        void respectiveGrades();
         void getCategory();
         void getCategoryTotal();
         void getCourseTotal();
         void getAll();
+        void print(int cat, int totalCat, int totalCatPoints);
         std::vector<float> GetWeightGrades();
 };

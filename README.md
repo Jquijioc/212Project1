@@ -121,5 +121,6 @@ Sample output given grades:
 | | printGrades() | 6/15/23 | 6/23/23 | Jonathan Ok |
 | | GetWeightGrades() | 6/15/23 | 6/23/23 | Jonathan Ok |
 | Joseph Quijioc | pseudocode | 6/15/23 | 6/23/23 | Joseph Quijioc |
-| | ReadMe file | 6/15/23 | | Joseph Quijioc |
+| | readme file | 6/15/23 | | Joseph Quijioc |
+| | flowchart | 6/15/23 | | Joseph Quijioc |
 | Amer al Sayari | pseudocode | 6/15/23 | 6/23/23 | Amer al Sayari|

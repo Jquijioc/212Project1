@@ -112,13 +112,14 @@ Sample output given grades:
 
 | Name | Contribution | Started | Ended | Finished by |
 | ---- | ------ | ------ | ------ | ------ |
-| Summer Lizarda | main.cpp | 6/15/23 | 6/23/23 | Summer Lizarda |
+| Summer Lizarda | pseudocode | 6/15/23 | 6/23/23 | Summer Lizarda |
+| | main.cpp | 6/15/23 | 6/23/23 | Summer Lizarda |
 | | getCourseTotal() | 6/22/23 | 6/23/23 | Summer Lizarda |
 | Jonathan Ok | pseudocode | 6/15/23 | 6/23/23 | Jonathan Ok |
 |  | gradebook.cpp | 6/15/23 | 6/23/23 | Jonathan Ok |
 | | getCategoryTotal() | 6/15/23 | 6/23/23 | Jonathan Ok |
 | | printGrades() | 6/15/23 | 6/23/23 | Jonathan Ok |
 | | GetWeightGrades() | 6/15/23 | 6/23/23 | Jonathan Ok |
-| Joseph Quijioc | ReadMe file | 6/15/23 | | |
-| | nothing | test | | | 
-| Amer al Sayari | | | | |
+| Joseph Quijioc | pseudocode | 6/15/23 | 6/23/23 | Joseph Quijioc |
+| Joseph Quijioc | ReadMe file | 6/15/23 | | Joseph Quijioc |
+| Amer al Sayari | pseudocode | 6/15/23 | 6/23/23 | Amer al Sayari|

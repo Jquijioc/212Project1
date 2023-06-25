@@ -25,6 +25,7 @@ Gradebook::~Gradebook(){
 
 }
 
+//Jon
 //The GetWeightGrades function gets the weighted average for each assignment in all categories.
 std::vector<float> Gradebook::GetWeightGrades() {
     std::vector<float> allGradesWeighted;
@@ -67,7 +68,7 @@ std::vector<float> Gradebook::GetWeightGrades() {
     return allGradesWeighted;
 }
 
-//Jon & Summer
+//Summer & Jon
 //The totalGrade function gets both the weighted total points of a category and the overall total of that category.
 std::vector<float> Gradebook::totalGrade(int cat){
     std::vector<float> weightedGrades = GetWeightGrades(); // Gets the weighted averages for each category
@@ -115,7 +116,7 @@ int Gradebook::getCategoryNumber() {
     }
 }
 
-//Jon & Summer
+//Summer & Jon
 //The print function takes in the category, the total amount of points for the category, and the total category points out of the weight.
 void Gradebook::print(int cat, int totalCat, float totalCatPoints){
     switch(cat) {
@@ -154,7 +155,7 @@ void Gradebook::print(int cat, int totalCat, float totalCatPoints){
     }
 }
 
-//Jon & Summer
+//Summer & Jon
 //The total function returns the points for each category depending on the category requested.
 float Gradebook::total(int cat){
     float total = 0;

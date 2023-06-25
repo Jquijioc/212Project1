@@ -67,6 +67,7 @@ std::vector<float> Gradebook::GetWeightGrades() {
     return allGradesWeighted;
 }
 
+//Jon & Summer
 //The totalGrade function gets both the weighted total points of a category and the overall total of that category.
 std::vector<float> Gradebook::totalGrade(int cat){
     std::vector<float> weightedGrades = GetWeightGrades(); // Gets the weighted averages for each category
@@ -96,6 +97,7 @@ std::vector<float> Gradebook::totalGrade(int cat){
     return totalGradePoints;
 }
 
+//Amer
 //The getCategoryNumber function is a helper method for main.cpp to display and take in user inputs for a category.
 int Gradebook::getCategoryNumber() {
     int cat;
@@ -113,6 +115,7 @@ int Gradebook::getCategoryNumber() {
     }
 }
 
+//Jon & Summer
 //The print function takes in the category, the total amount of points for the category, and the total category points out of the weight.
 void Gradebook::print(int cat, int totalCat, float totalCatPoints){
     switch(cat) {
@@ -151,6 +154,7 @@ void Gradebook::print(int cat, int totalCat, float totalCatPoints){
     }
 }
 
+//Jon & Summer
 //The total function returns the points for each category depending on the category requested.
 float Gradebook::total(int cat){
     float total = 0;
@@ -230,16 +234,16 @@ void Gradebook::getIndividual(int category) {
     switch (category) {
         case 1:
             grade = labGrades[index];
-            if (index < labGrades.size()) {
+            if (index < labGrades.size() && index > -1) {
                 std::cout << "Lab " << number << " grade is: ";
-                std::cout<< grade <<std::endl;
+                std::cout << grade <<std::endl;
             } else {
                 std::cout << "Lab does not exist." << std::endl;
             }
             break;
         case 2:
             grade = assignmentGrades[index];
-            if (index < assignmentGrades.size()) {
+            if (index < assignmentGrades.size() && index > -1) {
                 std::cout << "Assignment " << number << " grade is: ";
                 std::cout<< grade <<std::endl;
             } else {
@@ -248,24 +252,21 @@ void Gradebook::getIndividual(int category) {
             break;
         case 3:
             grade = projectGrades[index];
-            if (index < projectGrades.size()) {
+            if (index < projectGrades.size() && index > -1) {
                 std::cout << "Project " << number << " grade is: ";
-                std::cout<< grade <<std::endl;
+                std::cout<< grade << std::endl;
             } else {
                 std::cout <<  "Project does not exist." << std::endl;
             }
             break;
         case 4:
             grade = examGrades[index];
-            if (index < examGrades.size()) {
+            if (index < examGrades.size() && index > -1) {
                 std::cout << "Exam " << number << " grade is: ";
                 std::cout<< grade <<std::endl;
             } else {
                 std::cout << "Exam does not exist." << std::endl;
             }
             break;
-        default:
-            break;
     }
-    std::cout<< grade <<std::endl;
 }

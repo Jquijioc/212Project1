@@ -91,7 +91,7 @@ flowchart TD
   F ----> D{is data correct};
   
  ```
-GetWeightedGrades flowchart
+GetWeightedGrades Flowchart
 
 ```mermaid
 flowchart TD
@@ -102,6 +102,24 @@ flowchart TD
     E --> F[exit for loop];
     F --> G[push_back totalWeighted / category vector size into allGradesWeighted];
     G -- next category ----> B{Is the category vector empty?};
+
+```
+
+totalGrade Flowchart
+
+```mermaid
+flowchart TD
+    A[generate weighted grades via GetWeightGrades()] --> B[initialize float vector totalGradePoints with elements totalPoints and totalCategory];
+    B --> C{User input picks which category via switch statement};
+    C -- Lab --> D[totalPoints = lab weighted average grade * num of labs * 100];
+    C -- Assignments --> E[totalPoints = assignments weighted average grade * num of assignments * 100];
+    C -- Projects --> F[totalPoints = project weighted average grade * num of projects * 100];
+    C -- Exam --> G[totalPoints = exams weighted average grade * num of exam * 100];
+    D --> H[totalCategory += totalPoints];
+    E --> H[totalCategory += totalPoints];
+    F --> H[totalCategory += totalPoints];
+    G --> H[totalCategory += totalPoints];
+    H ---> I[return totalGradePoints];
 
 ```
 

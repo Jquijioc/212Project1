@@ -186,9 +186,13 @@ After running the correct commands with the desired file name, users will be pre
 
 ## Example outputs
 
-Sample output of User requesting 1 individual grade, then 1 for Lab, then the third Lab grade:
+Sample output of user requesting 1 individual grade, then 1 for Lab, then the third Lab grade:
 
 ![example output](https://github.com/Jquijioc/212Project1/blob/main/samplePics/Output1.jpg)
+
+Sample output of user requesting all grades and course overall:
+
+![example output2](https://github.com/Jquijioc/212Project1/blob/main/samplePics/output2.jpg)
 
 
 ### Contributions Table
@@ -214,6 +218,7 @@ Sample output of User requesting 1 individual grade, then 1 for Lab, then the th
 | Joseph Quijioc | pseudocode | 6/15/23 | 6/23/23 | Joseph Quijioc |
 | | readme file | 6/15/23 | | Joseph Quijioc |
 | | flowchart | 6/15/23 | | Joseph Quijioc |
+| | printGrades() | 6/15/23 | | Joseph Quijioc |
 | Amer al Sayari | pseudocode | 6/15/23 | 6/23/23 | Amer al Sayari|
 | | getCategoryNumber() | 6/22/23 | 6/23/23 | Amer al Sayari|
 | | video | 6/23/23 | 6/23/23 | Amer al Sayari|

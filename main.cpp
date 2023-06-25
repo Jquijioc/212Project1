@@ -5,7 +5,6 @@
 #include <fstream>
 #include <sstream>
 
-
 int main(int argc, char* argv[]){
     std::string file_name(argv[1]);
 
@@ -48,48 +47,48 @@ int main(int argc, char* argv[]){
 
             std::cin >> cat;
 
-            std::cout << "Please input the number of the assignment:" << std::endl;
+            if(cat < 5 && cat > 0) {
+                std::cout << "Please input the number of the assignment:" << std::endl;
 
-            std::cin >> num;
+                std::cin >> num;
 
-            switch(cat) {
-                case 1:
-                    if(num <= courseGrades[0].size()) {
-                        std::cout << "Lab " << num << " grade is: " ;
-                        test.getIndividual(cat, num);
-                    } else {
-                        std::cout << "The input individual deliverable number is larger than the amount in the category." << std::endl;
-                    }
-                    break;
-                case 2:
-                    if(num <= courseGrades[1].size()) {
-                        std::cout << "Assignment " << num << " grade is: " ;
-                        test.getIndividual(cat, num);
-                    } else {
-                        std::cout << "The input individual deliverable number is larger than the amount in the category." << std::endl;
-                    }
-                    break;
-                case 3:
-                    if(num <= courseGrades[2].size()) {
-                        std::cout << "Project " << num << " grade is: " ;
-                        test.getIndividual(cat, num);
-                    } else {
-                        std::cout << "The input individual deliverable number is larger than the amount in the category." ;
-                    }
-                    break;
-                case 4:
-                    if(num <= courseGrades[3].size()) {
-                        std::cout << "Exam " << num << " grade is: " ;
-                        test.getIndividual(cat, num);
-                    } else {
-                        std::cout << "The input individual deliverable number is larger than the amount in the category." << std::endl;
-                    }
-                    break;
-                default:
-                    std::cout << "An invalid category was input. The program is now exiting.." << std::endl;
-                    break;
+                switch (cat) {
+                    case 1:
+                        if (num <= courseGrades[0].size()) {
+                            std::cout << "Lab " << num << " grade is: ";
+                            test.getIndividual(cat, num);
+                        } else {
+                            std::cout << "The input individual deliverable number is larger than the amount in the category." << std::endl;
+                        }
+                        break;
+                    case 2:
+                        if (num <= courseGrades[1].size()) {
+                            std::cout << "Assignment " << num << " grade is: ";
+                            test.getIndividual(cat, num);
+                        } else {
+                            std::cout << "The input individual deliverable number is larger than the amount in the category." << std::endl;
+                        }
+                        break;
+                    case 3:
+                        if (num <= courseGrades[2].size()) {
+                            std::cout << "Project " << num << " grade is: ";
+                            test.getIndividual(cat, num);
+                        } else {
+                            std::cout << "The input individual deliverable number is larger than the amount in the category.";
+                        }
+                        break;
+                    case 4:
+                        if (num <= courseGrades[3].size()) {
+                            std::cout << "Exam " << num << " grade is: ";
+                            test.getIndividual(cat, num);
+                        } else {
+                            std::cout << "The input individual deliverable number is larger than the amount in the category." << std::endl;
+                        }
+                        break;
+                }
+            } else {
+                std::cout << "An invalid category was input. The program is now exiting.." << std::endl;
             }
-
             break;
         case 2:
             std::cout << "Please input a category:" << std::endl;

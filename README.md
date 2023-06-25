@@ -76,7 +76,9 @@ void Gradebook::getCategoryTotal(){
 
 ```
 
-Flowchart
+Flowcharts
+
+Big picture main
 
 ```mermaid
 flowchart TD
@@ -89,6 +91,21 @@ flowchart TD
   F ----> D{is data correct};
   
  ```
+GetWeightedGrades flowchart
+
+```mermaid
+flowchartTD
+    A[create empty vector for allGradesWeighted] --> B{Is the category vector empty?};
+    B -- Yes --> C[end];
+    B -- No --> D[enter for loop, looping for the category vector's size];
+    D --> E[The weighted grade at i'th element is added to totalWeighted];
+    E --> F[exit for loop];
+    F --> G[push_back (totalWeighted / category vector size) into allGradesWeighted];
+    G -- next category -->B;
+
+
+
+```
 
 ## Instructions on how to compile/use our program
 {user need to fill missed grades with 0 to get correct total}

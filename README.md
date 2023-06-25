@@ -94,6 +94,7 @@ flowchart TD
  ```
 
 ## Instructions on how to compile/use our program
+{user need to fill missed grades with 0 to get correct total}
 
 Command line arguments
 

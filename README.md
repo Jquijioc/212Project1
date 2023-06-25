@@ -115,10 +115,14 @@ flowchart TD
     C -- Assignments --> E[totalPoints = assignments weighted average grade * num of assignments * 100];
     C -- Projects --> F[totalPoints = project weighted average grade * num of projects * 100];
     C -- Exam --> G[totalPoints = exams weighted average grade * num of exam * 100];
-    D ---> H[totalCategory += totalPoints];
-    E ---> I[totalCategory += totalPoints];
-    F ---> J[totalCategory += totalPoints];
-    G ---> K[totalCategory += totalPoints];
+    D --> H[totalCategory += totalPoints];
+    E --> I[totalCategory += totalPoints];
+    F --> J[totalCategory += totalPoints];
+    G --> K[totalCategory += totalPoints];
+    H ---> L[return totalGradePoints vector];
+    I ---> L[return totalGradePoints vector];
+    J ---> L[return totalGradePoints vector];
+    K ---> L[return totalGradePoints vector];
   
 
 ```

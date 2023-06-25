@@ -132,9 +132,9 @@ print Flowchart
 flowchart TD
     A[take in parameters] --> B{switch statement to pick which category};
     B --> C[based on the category];
-    C --> D[cout "Category Grades: "];
+    C --> D[cout Category Grades: ];
     D --> E[enter for loop whose range is based on the category's size];
-    E --> F[cout << "Category " i+1 and categoryGrades[i]];
+    E --> F[cout Category number and categoryGrades[i]];
     F --> G[cout average grade for the category and the category total];
     
 ```

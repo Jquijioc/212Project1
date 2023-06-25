@@ -160,7 +160,8 @@ Our program takes in a file with the users sorted recorded grades.
 Each line starts with the category name, such as Labs, followed by the grade for Lab 1, then Lab 2, etc.
 The order of the categories is Labs, Assignments, Projects, and then Final.
 
-**Warning**
+### **Warning**
+
 User must fill any missing grades with a zero or else the program will not work.
 
 Example of a working data file:

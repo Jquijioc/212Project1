@@ -77,6 +77,7 @@ int main(int argc, char* argv[]){
             }
             break;
         case 3:
+            //The getCategoryNumber function isn't invoked here to account for the further, specialized discrimination.
             std::cout << "Hello! Please input an integer to request:" << std::endl;
             std::cout << "1: All Grades: Return all grades within their respective categories and course overall." << std::endl;
             std::cout << "2: Category Total: Returns only the category totals and course overall." << std::endl;

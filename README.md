@@ -100,8 +100,8 @@ flowchart TD
     B -- No --> D[enter for loop, looping for the category vector's size];
     D --> E[The weighted grade at i'th element is added to totalWeighted];
     E --> F[exit for loop];
-    F --> G[push_back (totalWeighted / category vector size) into allGradesWeighted];
-    G -- next category -->B{Is the category vector empty?};
+    F --> G[push_back totalWeighted / category vector size into allGradesWeighted];
+    G -- next category ----> B{Is the category vector empty?};
 
 ```
 

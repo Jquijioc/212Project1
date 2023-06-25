@@ -26,7 +26,7 @@ int main(int argc, char* argv[]){
         courseGrades.push_back(gradeCategory); // Append it to the list of vectors.
     }
 
-    Gradebook test(courseGrades[0], courseGrades[1], courseGrades[2], courseGrades[3]);
+    Gradebook grade(courseGrades[0], courseGrades[1], courseGrades[2], courseGrades[3]);
 
     int inp;
     int cat;
@@ -43,36 +43,36 @@ int main(int argc, char* argv[]){
     //The switch statement alters the menu based on the requisite category selected.
     switch(inp) {
         case 1:
-            cat = test.getCategoryNumber();
+            cat = grade.getCategoryNumber();
                 switch (cat) {
                     case 1:
-                        test.getIndividual(cat);
+                        grade.getIndividual(cat);
                         break;
                     case 2:
-                        test.getIndividual(cat);
+                        grade.getIndividual(cat);
                         break;
                     case 3:
-                        test.getIndividual(cat);
+                        grade.getIndividual(cat);
                         break;
                     case 4:
-                        test.getIndividual(cat);
+                        grade.getIndividual(cat);
                         break;
                 }
             break;
         case 2:
-            cat = test.getCategoryNumber();
+            cat = grade.getCategoryNumber();
             switch(cat) {
                 case 1:
-                    test.printGrades(cat);
+                    grade.printGrades(cat);
                     break;
                 case 2:
-                    test.printGrades(cat);
+                    grade.printGrades(cat);
                     break;
                 case 3:
-                    test.printGrades(cat);
+                    grade.printGrades(cat);
                     break;
                 case 4:
-                    test.printGrades(cat);
+                    grade.printGrades(cat);
                     break;
             }
             break;
@@ -87,13 +87,13 @@ int main(int argc, char* argv[]){
 
             switch(cor) {
                 case 1:
-                    test.printGrades(5);
+                    grade.printGrades(5);
                     break;
                 case 2:
-                    test.getCategoryTotal();
+                    grade.getCategoryTotal();
                     break;
                 case 3:
-                    test.getCourseTotal();
+                    grade.getCourseTotal();
                     break;
                 default:
                     std::cout << "An invalid course grade request was input. The program is now exiting.." << std::endl;

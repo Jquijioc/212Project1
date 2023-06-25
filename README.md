@@ -130,12 +130,12 @@ print Flowchart
 
 ```mermaid
 flowchart TD
-    A[takes in int cat, int totalCat, and float totalCatPoints] --> B{switch statement to pick which category};
-    B --> C [based on the category];
+    A[take in parameters] --> B{switch statement to pick which category};
+    B --> C[based on the category];
     C --> D[cout "Category Grades: "];
     D --> E[enter for loop whose range is based on the category's size];
     E --> F[cout << "Category " i+1 and categoryGrades[i]];
-    F --> G[cout average grade for the category and the category total of points earned];
+    F --> G[cout average grade for the category and the category total];
     
 ```
 

@@ -43,7 +43,6 @@ int main(int argc, char* argv[]){
     switch(inp) {
         case 1:
             cat = test.getCategoryNumber();
-            if(cat < 5 && cat > 0) {
                 switch (cat) {
                     case 1:
                         test.getIndividual(cat);
@@ -58,9 +57,6 @@ int main(int argc, char* argv[]){
                         test.getIndividual(cat);
                         break;
                 }
-            } else {
-                std::cout << "An invalid category was input. The program is now exiting.." << std::endl;
-            }
             break;
         case 2:
             cat = test.getCategoryNumber();
@@ -77,11 +73,7 @@ int main(int argc, char* argv[]){
                 case 4:
                     test.printGrades(cat);
                     break;
-                default:
-                    std::cout << "An invalid category was input. The program is now exiting.." << std::endl;
-                    break;
             }
-
             break;
         case 3:
             std::cout << "Hello! Please input an integer to request:" << std::endl;
@@ -93,7 +85,7 @@ int main(int argc, char* argv[]){
 
             switch(cor) {
                 case 1:
-                    test.getAll();
+                    test.printGrades(5);
                     break;
                 case 2:
                     test.getCategoryTotal();

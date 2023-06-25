@@ -72,20 +72,20 @@ void Gradebook::print(int cat, int totalCat, int totalCatPoints){
     float totalCourse = 0;
     switch(cat) {
         case 1:
-            std::cout << "ASSIGNMENT GRADES: " << std::endl;
+            std::cout << "LAB GRADES: " << std::endl;
             for(int i = 0; i < assignmentGrades.size(); i++) {
                 std::cout << "Assignment " << i+1 << "...................... " << assignmentGrades[i] << std::endl;
             }
-            std::cout << "Total Grade for Assignment:" << " " << totalCat << std::endl;
-            std::cout << "Points Earned For Assignments: " << totalCatPoints << "/20" << std::endl; // Print earned points for assignments
+            std::cout << "Total Grade for Lab:" << " " << totalCat << std::endl;
+            std::cout << "Points Earned For Labs: " << totalCatPoints << "/20" << std::endl; // Print earned points for assignments
             break;
         case 2:
-            std::cout << "PROJECT GRADES: " << std::endl;
+            std::cout << "ASSIGNMENT GRADES: " << std::endl;
             for(int i = 0; i < projectGrades.size(); i++) {
                 std::cout << "Project " << i+1 << "...................... " << projectGrades[i] << std::endl;
             }
-            std::cout << "Total Grade for Project:" << " " << totalCat << std::endl;
-            std::cout << "Points Earned For Projects: " << totalCatPoints << "/50" << std::endl; // Print earned points for projects
+            std::cout << "Total Grade for Assignment:" << " " << totalCat << std::endl;
+            std::cout << "Points Earned For Assignments: " << totalCatPoints << "/50" << std::endl; // Print earned points for projects
             break;
         case 3:
             std::cout << "PROJECT GRADES: " << std::endl;
@@ -125,47 +125,47 @@ void Gradebook::printGrades(int category) {
         print(category, totalLab, totalLabPoints);
     }
 
-    //ASSIGNMENTS
-    //for loop for total course overall
-    int totalAssignment = 0;
-    for(int i = 0; i < assignmentGrades.size(); i++) {
-        totalAssignment += assignmentGrades[i];
-    }
-    float totalAssignmentPoints = weightedGrades[1] * assignmentGrades.size() * 100;
-    totalCourse += totalAssignmentPoints;
-    //Prints All Grades in Assignment
+        //ASSIGNMENTS
+        //for loop for total course overall
+        int totalAssignment = 0;
+        for(int i = 0; i < assignmentGrades.size(); i++) {
+            totalAssignment += assignmentGrades[i];
+        }
+        float totalAssignmentPoints = weightedGrades[1] * assignmentGrades.size() * 100;
+        totalCourse += totalAssignmentPoints;
+        //Prints All Grades in Assignment
 
-    if(category == 2){
-        print(category, totalAssignment, totalAssignmentPoints);
-    }
+        if(category == 2){
+            print(category, totalAssignment, totalAssignmentPoints);
+        }
 
-    //PROJECTS
-    //for loop for total course overall
-    int totalProj = 0;
-    for(int i = 0; i < projectGrades.size(); i++) {
-        totalProj += projectGrades[i];
-    }
-    float totalProjectPoints = weightedGrades[2] * projectGrades.size() * 100;
-    totalCourse += totalProjectPoints;
+            //PROJECTS
+            //for loop for total course overall
+            int totalProj = 0;
+            for(int i = 0; i < projectGrades.size(); i++) {
+                totalProj += projectGrades[i];
+            }
+            float totalProjectPoints = weightedGrades[2] * projectGrades.size() * 100;
+            totalCourse += totalProjectPoints;
 
-    //Prints All Grades in Projects
-    if(category == 3) {
-        print(category, totalProj, totalProjectPoints);
-    }
+            //Prints All Grades in Projects
+            if(category == 3) {
+                print(category, totalProj, totalProjectPoints);
+            }
 
-    //EXAMS
-    //for loop for total course overall
-    int totalExam = 0;
-    for (int i = 0; i < examGrades.size(); i++) {
-        totalExam += examGrades[i];
-    }
-    float totalExamPoints = weightedGrades[3] * examGrades.size() * 100;
-    totalCourse += totalExamPoints;
+                //EXAMS
+                //for loop for total course overall
+                int totalExam = 0;
+                for (int i = 0; i < examGrades.size(); i++) {
+                    totalExam += examGrades[i];
+                }
+                float totalExamPoints = weightedGrades[3] * examGrades.size() * 100;
+                totalCourse += totalExamPoints;
 
-    //Prints all grades in exams.
-    if(category == 4) {
-        print(category, totalExam, totalExamPoints);
-    }
+                //Prints all grades in exams.
+                if(category == 4) {
+                    print(category, totalExam, totalExamPoints);
+                }
 
     //prints out course overall at the end
     std::cout << "Total Course Overall: " << totalCourse << std::endl;

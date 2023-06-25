@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-//The default unparameterized constructor.
+//The default unparameterized Gradebook constructor.
 Gradebook::Gradebook(){
     this->labGrades = {0};
     this->assignmentGrades = {0};
@@ -11,14 +11,13 @@ Gradebook::Gradebook(){
     this->examGrades = {0};
 }
 
-//The parameterized constructor that assigns the vectors to appropriate vectors in the Gradebook.
+//The parameterized Gradebook constructor that assigns the vectors to their appropriate vectors.
 Gradebook::Gradebook(std::vector<int> labGrades, std::vector<int> assignmentGrades, std::vector<int> projectGrades, std::vector<int> examGrades){
     //The vectors assume inputs for grades for all assignments, and grades not given yet should be input as 0.
     this->labGrades = labGrades;
     this->assignmentGrades = assignmentGrades;
     this->projectGrades = projectGrades;
     this->examGrades = examGrades;
-    //The total grade is the total amount of possible points available.
 }
 
 //The destructor is unnecessary, since we aren't allocating any dynamic memory on the heap.
@@ -26,20 +25,20 @@ Gradebook::~Gradebook(){
 
 }
 
-//Finds the average for each assignment in all categories.
+//The GetWeightGrades function gets the weighted average for each assignment in all categories.
 std::vector<float> Gradebook::GetWeightGrades() {
     std::vector<float> allGradesWeighted;
 
-    //Check if there are any lab grades.
+    //Check if there are any lab grades. If so, multiply by the course given weight and append it to a vector.
     if (!labGrades.empty()) {
         float totalLabWeighted = 0;
         for (int i = 0; i < labGrades.size(); i++) {
             totalLabWeighted += (labGrades[i] / 200.0) * 0.20;
         }
-        allGradesWeighted.push_back(totalLabWeighted);
+        allGradesWeighted.push_back(totalLabWeighted / labGrades.size());
     }
 
-    //Check if there are any assignment grades.
+    //Check if there are any assignment grades. If so, multiply by the course given weight and append it to a vector.
     if (!assignmentGrades.empty()) {
         float totalAssignmentWeighted = 0;
         for (int i = 0; i < assignmentGrades.size(); i++) {
@@ -48,7 +47,7 @@ std::vector<float> Gradebook::GetWeightGrades() {
         allGradesWeighted.push_back(totalAssignmentWeighted / assignmentGrades.size());
     }
 
-    //Check if there are any project grades.
+    //Check if there are any project grades. If so, multiply by the course given weight and append it to a vector.
     if (!projectGrades.empty()) {
         float totalProjectWeighted = 0;
         for (int i = 0; i < projectGrades.size(); i++) {
@@ -57,7 +56,7 @@ std::vector<float> Gradebook::GetWeightGrades() {
         allGradesWeighted.push_back(totalProjectWeighted / projectGrades.size());
     }
 
-    //Check if there are any exam grades.
+    //Check if there are any exam grades. If so, multiply by the course given weight and append it to a vector.
     if (!examGrades.empty()) {
         float totalExamWeighted = 0;
         for (int i = 0; i < examGrades.size(); i++) {
@@ -68,14 +67,17 @@ std::vector<float> Gradebook::GetWeightGrades() {
     return allGradesWeighted;
 }
 
+//The totalGrade function gets both the weighted total points of a category and the overall total of that category.
 std::vector<float> Gradebook::totalGrade(int cat){
-    float totalPoints = 0;
-    float totalCourse = 0;
     std::vector<float> weightedGrades = GetWeightGrades(); // Gets the weighted averages for each category
-    std::vector<float> totalGradePoints = {totalPoints, totalCourse};
+    float totalPoints = 0;
+    float totalCategory = 0;
+    //The vector to hold total category points and total category (totalGradePoints[0] = totalPoints, totalGradePoints[1] = totalCategory.)
+    std::vector<float> totalGradePoints = {totalPoints, totalCategory};
+    //The switch statement alters weight allotment based on the category (1 for lab weight, 2 for assignment weight, etc.)
     switch(cat) {
         case 1:
-            totalGradePoints[0] = ((weightedGrades[0] / labGrades.size()) * 8) * 100;
+            totalGradePoints[0] = weightedGrades[0] * labGrades.size() * 100;
             totalGradePoints[1] += totalGradePoints[0];
             break;
         case 2:
@@ -94,6 +96,7 @@ std::vector<float> Gradebook::totalGrade(int cat){
     return totalGradePoints;
 }
 
+//The getCategoryNumber function is a helper method for main.cpp to display and take in user inputs for a category.
 int Gradebook::getCategoryNumber() {
     int cat;
     std::cout << "Please input a category:" << std::endl;
@@ -110,7 +113,8 @@ int Gradebook::getCategoryNumber() {
     }
 }
 
-void Gradebook::print(int cat, int totalCat, int totalCatPoints){
+//The print function takes in the category, the total amount of points for the category, and the total category points out of the weight.
+void Gradebook::print(int cat, int totalCat, float totalCatPoints){
     switch(cat) {
         case 1:
             std::cout << "LAB GRADES: " << std::endl;
@@ -147,6 +151,7 @@ void Gradebook::print(int cat, int totalCat, int totalCatPoints){
     }
 }
 
+//The total function returns the points for each category depending on the category requested.
 float Gradebook::total(int cat){
     float total = 0;
     switch(cat) {
@@ -174,13 +179,15 @@ float Gradebook::total(int cat){
     return total;
 }
 
-//This function adds all the grades into their respective categories and return all grades in the category and gets the total for how many points can be earned.
+//Jonathan & Joseph <3
+//The printGrades function adds all the grades into their respective categories and return all grades in the category and gets the total for how many points can be earned.
 void Gradebook::printGrades(int category) {
     if(category != 5){
         std::vector<float> totalGrades = totalGrade(category);
         float totalPoint = total(category);
         print(category, totalPoint, totalGrades[0]);
     } else {
+        //If a special case is called (for All Grades), the same function prints out all the categories.
         float totalCourse = 0;
         for(int i = 1; i <= 4; i++){
             std::vector<float> totalGrades = totalGrade(i);
@@ -193,7 +200,7 @@ void Gradebook::printGrades(int category) {
 }
 
 //Jon
-//This functions gets the category total and course overall grade.
+//The getCategoryTotal functions prints the category total the student earned for each course and course overall grade.
 void Gradebook::getCategoryTotal(){
     std::cout << "Total Grade for Lab" << "...................... " << total(1) << "/200"<< std::endl;
     std::cout << "Total Grade for Assignment" << "...................... " << total(2) << "/200" << std::endl;
@@ -205,16 +212,17 @@ void Gradebook::getCategoryTotal(){
 }
 
 //Summer
-//The course overall function.
+//The getCourseTotal function returns the total grade out of 100 for the course.
 void Gradebook::getCourseTotal() {
     float totalCourseGrade = total(1) + total(2) + total(3) + total(4);
     std::cout << "Total Course Overall: " << totalCourseGrade/10 << std::endl;
 }
 
 //Amer
-//The get individual grade function.
+//The getIndividual function returns the individual grade upon request of a category and a certain number from that category (i.e. Lab 2, Project 1).
 void Gradebook::getIndividual(int category) {
     int grade, number;
+    //After the category is input in main.cpp, the number is input within getIndividual.
     std::cout << "Please input the number of the assignment:" << std::endl;
     std::cin >> number;
     int index = number - 1;

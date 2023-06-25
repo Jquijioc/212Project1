@@ -138,7 +138,22 @@ flowchart TD
     E --> F[print out category total points using given parameter totalCatPoints ];
 
 ```
+printGrades Flowchart
 
+```mermaid
+flowchart TD
+    A[take in int category parameter] --> B{does user want specific category or all grades?};
+    B -- specific category --> C[use totalGrades function to get weighted total for the chosen category];
+    C --> D[get total raw points earned in specific category];
+    D --> E[pass in weighted total and total raw points into print function to cout requested grades];
+    B -- all grades --> F[create float totalCourse to record total Course weighted grade];
+    F --> G[ create for loop ranging from i = 1 to i <= 4 to loop through each category];
+    G --> H[use a variation of the specific category implementation but instead pass i as a parameter to go through all categories];
+    H --> I[as i iterates by 1, add to the totalCourse to print out total course overall];
+    I --> J[print out course overall];
+
+
+```
 ## Instructions on how to compile/use our program
 {user need to fill missed grades with 0 to get correct total}
 

@@ -155,13 +155,35 @@ flowchart TD
 
 ```
 ## Instructions on how to compile/use our program
-{user need to fill missed grades with 0 to get correct total}
+
+Our program takes in a file with the users sorted recorded grades.
+Each line starts with the category name, such as Labs, followed by the grade for Lab 1, then Lab 2, etc.
+The order of the categories is Labs, Assignments, Projects, and then Final.
+
+**Warning**
+User must fill any missing grades with a zero or else the program will not work.
+
+Example of a working data file:
+
+![datafile](https://github.com/Jquijioc/212Project1/blob/main/samplePics/ExampleData.jpg)
 
 Command line arguments
+
+Command Line arguments follow the form of:
+
+```
+g++ main.cpp gradebook.cpp -o test && ./test
+```
+where "dataset" is the name of the file with the user's data
 
 Function and method calls
 
 ## Runtime Instructions
+
+Running this program is rather straightforward.
+After running the correct commands with the desired file name, users will be presented with a menu requesting the user to type an integer and press enter to request the grade/s they wish to see.
+
+![examplemenu](https://github.com/Jquijioc/212Project1/blob/main/samplePics/ExampleMenu.jpg)
 
 ## Example outputs
 

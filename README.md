@@ -78,7 +78,7 @@ void Gradebook::getCategoryTotal(){
 
 Flowcharts
 
-Big picture main
+Big picture overview of program
 
 ```mermaid
 flowchart TD
@@ -124,6 +124,20 @@ flowchart TD
     J ---> L[return totalGradePoints vector];
     K ---> L[return totalGradePoints vector];
   
+```
+
+print Flowchart
+
+```mermaid
+flowchart TD
+    A[function takes in int cat, int totalCat, and float totalCatPoints] --> B{switch statement to pick which category};
+    B -- based on the category --> C[std::cout "Category Grades: "];
+    C --> D[enter for loop whose range is based on the category's size];
+    D --> E[std::cout << "Category " << i+1 << categoryGrades[i] << std::endl];
+    E --> F[std::cout average grade for the category and the category total of points earned];
+    
+    
+
 
 ```
 

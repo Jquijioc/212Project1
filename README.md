@@ -109,16 +109,16 @@ totalGrade Flowchart
 
 ```mermaid
 flowchart TD
-    A[generate weighted grades via GetWeightGrades()] --> B[initialize float vector totalGradePoints with elements totalPoints and totalCategory];
+    A[generate weighted grades via GetWeightGrades] --> B[initialize float vector totalGradePoints with elements totalPoints and totalCategory];
     B --> C{User input picks which category via switch statement};
     C -- Lab --> D[totalPoints = lab weighted average grade * num of labs * 100];
     C -- Assignments --> E[totalPoints = assignments weighted average grade * num of assignments * 100];
     C -- Projects --> F[totalPoints = project weighted average grade * num of projects * 100];
     C -- Exam --> G[totalPoints = exams weighted average grade * num of exam * 100];
-    D --> H[totalCategory += totalPoints];
-    E --> I[totalCategory += totalPoints];
-    F --> J[totalCategory += totalPoints];
-    G --> K[totalCategory += totalPoints];
+    D ---> H[totalCategory += totalPoints];
+    E ---> I[totalCategory += totalPoints];
+    F ---> J[totalCategory += totalPoints];
+    G ---> K[totalCategory += totalPoints];
   
 
 ```

@@ -199,6 +199,7 @@ void Gradebook::printGrades(int category) {
             float totalPoint = total(i);
             totalCourse += totalGrades[1];
             print(i, totalPoint, totalGrades[0]);
+            std::cout << std::endl;
         }
         std::cout << "Total Course Overall: " << totalCourse << std::endl;
     }

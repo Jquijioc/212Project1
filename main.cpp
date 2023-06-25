@@ -16,6 +16,9 @@ int main(int argc, char* argv[]){
     while (std::getline(file, line)){
         std::stringstream ss(line);
         std::vector<int> gradeCategory;
+        std::string firstString;  // Add a variable to store the first string
+        ss >> firstString;  // Read and ignore the first string
+
         int temp;
         while (ss >> temp) {
             gradeCategory.push_back(temp);

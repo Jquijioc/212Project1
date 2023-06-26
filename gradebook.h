@@ -16,10 +16,10 @@ class Gradebook{
         ~Gradebook();
         //The helper methods:
         int getCategoryNumber(); //A helper function for main.cpp to get user input for category.
+        std::vector<float> GetWeightGrades(); //A helper method to calculate weighted grades.
         void print(int cat, int totalCat, float totalCatPoints); //A helper method to print out grades.
         float total(int cat); //A helper method to get the individual point totals of each category.
-        std::vector<float> totalGrade(int cat); //A helper method to calculate category point weights.
-        std::vector<float> GetWeightGrades(); //A helper method to actually calculate weighted grades.
+        std::vector<float> totalGrade(int cat); //A helper method to sum category point weights.
         //The primary methods:
         void printGrades(int category); //The function prints category grades, totals, and all grades.
         void getIndividual(int category); //The function prints individual grades.

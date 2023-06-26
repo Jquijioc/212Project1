@@ -193,7 +193,7 @@ where "dataset" is the name of the file with the user's data.
 ## Runtime Instructions
 
 Running this program is rather straightforward.
-After inputting the requisite command line argument with the desired file name of the grade data, users will be prompted to input integers to request particualr course grades, categorical grades, and/or individual grade(s) they wish to see.
+After inputting the requisite command line argument with the file name of the grade data, users will be prompted to input integers to request particualr course grades, categorical grades, and/or individual grade(s) they wish to see. The user can navigate the menus in accordance with the given outputs.
 
 ![examplemenu](https://github.com/Jquijioc/212Project1/blob/main/samplePics/ExampleMenu.jpg)
 

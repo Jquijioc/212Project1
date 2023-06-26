@@ -25,6 +25,24 @@ Gradebook::~Gradebook(){
 
 }
 
+//Amer
+//The getCategoryNumber function is a helper method for main.cpp to display and take in user inputs for a category.
+int Gradebook::getCategoryNumber() {
+    int cat;
+    std::cout << "Please input a category:" << std::endl;
+    std::cout << "1: Lab" << std::endl;
+    std::cout << "2: Assignment" << std::endl;
+    std::cout << "3: Project" << std::endl;
+    std::cout << "4: Exam" << std::endl;
+    std::cin >> cat;
+    if(cat < 5 && cat > 0) {
+        return cat;
+    } else {
+        std::cout << "An invalid category was input. The program is now exiting.." << std::endl;
+        return 0;
+    }
+}
+
 //Jon
 //The GetWeightGrades function gets the weighted average for each assignment in all categories.
 std::vector<float> Gradebook::GetWeightGrades() {
@@ -69,7 +87,7 @@ std::vector<float> Gradebook::GetWeightGrades() {
 }
 
 //Summer & Jon
-//The totalGrade function gets both the weighted total points of a category and the overall total of that category.
+//The totalGrade function gets both the *weighted total points of a category and the overall total of that category.
 std::vector<float> Gradebook::totalGrade(int cat){
     std::vector<float> weightedGrades = GetWeightGrades(); // Gets the weighted averages for each category
     float totalPoints = 0;
@@ -98,65 +116,9 @@ std::vector<float> Gradebook::totalGrade(int cat){
     return totalGradePoints;
 }
 
-//Amer
-//The getCategoryNumber function is a helper method for main.cpp to display and take in user inputs for a category.
-int Gradebook::getCategoryNumber() {
-    int cat;
-    std::cout << "Please input a category:" << std::endl;
-    std::cout << "1: Lab" << std::endl;
-    std::cout << "2: Assignment" << std::endl;
-    std::cout << "3: Project" << std::endl;
-    std::cout << "4: Exam" << std::endl;
-    std::cin >> cat;
-    if(cat < 5 && cat > 0) {
-        return cat;
-    } else {
-        std::cout << "An invalid category was input. The program is now exiting.." << std::endl;
-        return 0;
-    }
-}
 
 //Summer & Jon
-//The print function takes in the category, the total amount of points for the category, and the total category points out of the weight.
-void Gradebook::print(int cat, int totalCat, float totalCatPoints){
-    switch(cat) {
-        case 1:
-            std::cout << "LAB GRADES: " << std::endl;
-            for(int i = 0; i < labGrades.size(); i++) {
-                std::cout << "Lab " << i+1 << "...................... " << labGrades[i] << std::endl;
-            }
-            std::cout << "Total Grade for Lab:" << " " << totalCat << std::endl;
-            std::cout << "Category Total For Labs: " << totalCatPoints << "/20" << std::endl; // Print earned points for assignments
-            break;
-        case 2:
-            std::cout << "ASSIGNMENT GRADES: " << std::endl;
-            for(int i = 0; i < assignmentGrades.size(); i++) {
-                std::cout << "Assignment " << i+1 << "...................... " << assignmentGrades[i] << std::endl;
-            }
-            std::cout << "Total Grade for Assignment:" << " " << totalCat << std::endl;
-            std::cout << "Category Total For Assignments: " << totalCatPoints << "/20" << std::endl; // Print earned points for projects
-            break;
-        case 3:
-            std::cout << "PROJECT GRADES: " << std::endl;
-            for(int i = 0; i < projectGrades.size(); i++) {
-                std::cout << "Project " << i+1 << "...................... " << projectGrades[i] << std::endl;
-            }
-            std::cout << "Total Grade for Project:" << " " << totalCat << std::endl;
-            std::cout << "Category Total For Projects: " << totalCatPoints << "/50" << std::endl; // Print earned points for projects
-            break;
-        case 4:
-            std::cout << "EXAM GRADES: " << std::endl;
-            for (int i = 0; i < examGrades.size(); i++) {
-                std::cout << "Exam " << i+1 << "...................... " << examGrades[i] << std::endl;
-            }
-            std::cout << "Total Grade for Exam:" << " " << totalCat << std::endl;
-            std::cout << "Category Total For Exam: " << totalCatPoints << "/10" << std::endl; // Print earned points for exams
-            break;
-    }
-}
-
-//Summer & Jon
-//The total function returns the points for each category depending on the category requested.
+//The total function returns the unweighted points for each category depending on the category requested.
 float Gradebook::total(int cat){
     float total = 0;
     switch(cat) {
@@ -184,6 +146,45 @@ float Gradebook::total(int cat){
     return total;
 }
 
+//Summer & Jon
+//The print function takes in the category, the total amount of points for the category, and the total category points out of the weight.
+void Gradebook::print(int cat, int totalCat, float totalCatPoints){
+    switch(cat) {
+        case 1:
+            std::cout << "LAB GRADES: " << std::endl;
+            for(int i = 0; i < labGrades.size(); i++) {
+                std::cout << "Lab " << i+1 << "...................... " << labGrades[i] << std::endl;
+            }
+            std::cout << "Category Total for Lab:" << " " << totalCat << std::endl;
+            std::cout << "Total Grade For Labs: " << totalCatPoints << "/20" << std::endl; // Print earned points for assignments
+            break;
+        case 2:
+            std::cout << "ASSIGNMENT GRADES: " << std::endl;
+            for(int i = 0; i < assignmentGrades.size(); i++) {
+                std::cout << "Assignment " << i+1 << "...................... " << assignmentGrades[i] << std::endl;
+            }
+            std::cout << "Category Total for Assignment:" << " " << totalCat << std::endl;
+            std::cout << "Total Grade For Assignments: " << totalCatPoints << "/50" << std::endl; // Print earned points for projects
+            break;
+        case 3:
+            std::cout << "PROJECT GRADES: " << std::endl;
+            for(int i = 0; i < projectGrades.size(); i++) {
+                std::cout << "Project " << i+1 << "...................... " << projectGrades[i] << std::endl;
+            }
+            std::cout << "Category Total for Project:" << " " << totalCat << std::endl;
+            std::cout << "Total Grade For Projects: " << totalCatPoints << "/50" << std::endl; // Print earned points for projects
+            break;
+        case 4:
+            std::cout << "EXAM GRADES: " << std::endl;
+            for (int i = 0; i < examGrades.size(); i++) {
+                std::cout << "Exam " << i+1 << "...................... " << examGrades[i] << std::endl;
+            }
+            std::cout << "Category Total for Exam:" << " " << totalCat << std::endl;
+            std::cout << "Total Grade For Exam: " << totalCatPoints << "/10" << std::endl; // Print earned points for exams
+            break;
+    }
+}
+
 //Jonathan & Joseph <3
 //The printGrades function adds all the grades into their respective categories and return all grades in the category and gets the total for how many points can be earned.
 void Gradebook::printGrades(int category) {
@@ -208,13 +209,13 @@ void Gradebook::printGrades(int category) {
 //Jon
 //The getCategoryTotal functions prints the category total the student earned for each course and course overall grade.
 void Gradebook::getCategoryTotal(){
-    std::cout << "Total Grade for Lab" << "...................... " << total(1) << "/200"<< std::endl;
-    std::cout << "Total Grade for Assignment" << "...................... " << total(2) << "/200" << std::endl;
-    std::cout << "Total Grade for Project" << "...................... " << total(3) << "/500" << std::endl;
-    std::cout << "Total Grade for Exam" << "...................... " << total(4) << "/100" << std::endl;
+    std::cout << "Category Total for Lab" << "...................... " << total(1) << "/200"<< std::endl;
+    std::cout << "Category Total for Assignment" << "...................... " << total(2) << "/200" << std::endl;
+    std::cout << "Category Total for Project" << "...................... " << total(3) << "/500" << std::endl;
+    std::cout << "Category Total for Exam" << "...................... " << total(4) << "/100" << std::endl;
 
     float totalCourseGrade = total(1) + total(2) + total(3) + total(4);
-    std::cout <<"Final Grade: " << totalCourseGrade << "/1000" << std::endl;
+    std::cout <<"Total Course Overall: " << totalCourseGrade << "/1000" << std::endl;
 }
 
 //Summer

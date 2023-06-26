@@ -14,7 +14,7 @@ More specifically, the project required our program to be able to output the gra
     
 # Pseudocode
 
-##main.cpp
+## main.cpp
 
 ``` 
 #include "gradebook.h"
@@ -40,7 +40,7 @@ int main(int argc, char* argv[]){
 }
 
 ```
-# gradebook.cpp
+## gradebook.cpp
 
 ```
 GetWeightGrades Function
@@ -76,7 +76,7 @@ void Gradebook::getCategoryTotal(){
 
 # Flowcharts
 
-# Program Overview
+## Program Overview
 
 ```mermaid
 flowchart TD
@@ -89,7 +89,7 @@ flowchart TD
   F ----> D{is data correct};
   
  ```
-# getWeightedGrades() Flowchart
+## getWeightedGrades() Flowchart
 
 ```mermaid
 flowchart TD
@@ -103,7 +103,7 @@ flowchart TD
 
 ```
 
-# totalGrade() Flowchart
+## totalGrade() Flowchart
 
 ```mermaid
 flowchart TD
@@ -124,7 +124,7 @@ flowchart TD
   
 ```
 
-# print() Flowchart
+## print() Flowchart
 
 ```mermaid
 
@@ -136,7 +136,7 @@ flowchart TD
     E --> F[print out category total points using given parameter totalCatPoints ];
 
 ```
-printGrades Flowchart
+## printGrades() Flowchart
 
 ```mermaid
 flowchart TD

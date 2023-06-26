@@ -12,9 +12,9 @@ More specifically, the project required our program to be able to output the gra
    * only category totals and course overall
    * only course overall
     
-## Planning of the Project
+# Pseudocode
 
-Pseudocode For Main.cpp
+##main.cpp
 
 ``` 
 #include "gradebook.h"
@@ -40,8 +40,8 @@ int main(int argc, char* argv[]){
 }
 
 ```
+# gradebook.cpp
 
-Pseudocode for Gradebook.cpp
 ```
 GetWeightGrades Function
 std::vector<float> Gradebook::GetWeightGrades()
@@ -74,9 +74,9 @@ void Gradebook::getCategoryTotal(){
 
 ```
 
-Flowcharts
+# Flowcharts
 
-Big picture overview of program
+# Program Overview
 
 ```mermaid
 flowchart TD
@@ -89,7 +89,7 @@ flowchart TD
   F ----> D{is data correct};
   
  ```
-GetWeightedGrades Flowchart
+# getWeightedGrades() Flowchart
 
 ```mermaid
 flowchart TD
@@ -103,7 +103,7 @@ flowchart TD
 
 ```
 
-totalGrade Flowchart
+# totalGrade() Flowchart
 
 ```mermaid
 flowchart TD
@@ -124,7 +124,7 @@ flowchart TD
   
 ```
 
-print Flowchart
+# print() Flowchart
 
 ```mermaid
 
@@ -152,28 +152,29 @@ flowchart TD
 
 
 ```
-## Instructions on how to compile/use our program
+## Instructions on Input & Compilation
 
 Our program takes in a file with the users sorted recorded grades.
 Each line starts with the category name, such as Labs, followed by the grade for Lab 1, then Lab 2, etc.
-The order of the categories is Labs, Assignments, Projects, and then Final.
+The lines should be input in the order of Labs, Assignments, Projects, and then Final.
 
 ### **Warning**
 
-User must fill any missing grades with a zero or else the program will not work. Example of a working data file below:
+The user must fill any missing grades with a zero or else the program will not work. An example of a working data file below:
 
 ![datafile](https://github.com/Jquijioc/212Project1/blob/main/samplePics/ExampleData.jpg)
 
-Command line arguments
+# Command Line Arguments
 
-Command Line arguments follow the form of
+The program's command line arguments follow the form of
 
 ```
 g++ main.cpp gradebook.cpp -o test && ./test dataset
+
 ```
 where "dataset" is the name of the file with the user's data
 
-Function and method calls
+# Function and Method Calls
 
 ## Runtime Instructions
 
@@ -182,7 +183,7 @@ After running the correct commands with the desired file name, users will be pre
 
 ![examplemenu](https://github.com/Jquijioc/212Project1/blob/main/samplePics/ExampleMenu.jpg)
 
-## Example outputs
+## Example Outputs
 
 Sample output of user requesting 1 individual grade, then 1 for Lab, then the third Lab grade:
 

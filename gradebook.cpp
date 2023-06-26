@@ -213,9 +213,7 @@ void Gradebook::getCategoryTotal(){
     std::cout << "Category Total for Assignment" << "...................... " << total(2) << "/200" << std::endl;
     std::cout << "Category Total for Project" << "...................... " << total(3) << "/500" << std::endl;
     std::cout << "Category Total for Exam" << "...................... " << total(4) << "/100" << std::endl;
-
-    float totalCourseGrade = total(1) + total(2) + total(3) + total(4);
-    std::cout <<"Total Course Overall: " << totalCourseGrade << "/1000" << std::endl;
+    getCourseTotal();
 }
 
 //Summer

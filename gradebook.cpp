@@ -164,7 +164,7 @@ void Gradebook::print(int cat, int totalCat, float totalCatPoints){
                 std::cout << "Assignment " << i+1 << "...................... " << assignmentGrades[i] << std::endl;
             }
             std::cout << "Category Total for Assignment:" << " " << totalCat << std::endl;
-            std::cout << "Total Grade For Assignments: " << totalCatPoints << "/50" << std::endl; // Print earned points for projects
+            std::cout << "Total Grade For Assignments: " << totalCatPoints << "/20" << std::endl; // Print earned points for projects
             break;
         case 3:
             std::cout << "PROJECT GRADES: " << std::endl;

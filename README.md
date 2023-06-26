@@ -40,13 +40,8 @@ int main(int argc, char* argv[]){
 }
 
 ```
-example pseudocode 2
 
-```
-//put code in between the tics
-
-```
-//Pseudocode for Gradebook.cpp
+Pseudocode for Gradebook.cpp
 ```
 GetWeightGrades Function
 std::vector<float> Gradebook::GetWeightGrades()
@@ -219,9 +214,9 @@ Sample output of user requesting all grades and course overall:
 | | print() | 6/17/23 | 6/25/23 | Summer Lizarda |
 | | total() | 6/17/23 | 6/25/23 | Summer Lizarda |
 | Joseph Quijioc | pseudocode | 6/15/23 | 6/23/23 | Joseph Quijioc |
-| | readme file | 6/15/23 | | Joseph Quijioc |
-| | flowchart | 6/15/23 | | Joseph Quijioc |
-| | printGrades() | 6/15/23 | | Joseph Quijioc |
+| | writing README | 6/15/23 | 6/25/23 | Joseph Quijioc |
+| | Flowcharts | 6/15/23 | 6/24/23 | Joseph Quijioc |
+| | printGrades() | 6/15/23 | 6/25/23 | Joseph Quijioc |
 | Amer al Sayari | pseudocode | 6/15/23 | 6/23/23 | Amer al Sayari|
 | | getCategoryNumber() | 6/22/23 | 6/23/23 | Amer al Sayari|
 | | video | 6/23/23 | 6/23/23 | Amer al Sayari|

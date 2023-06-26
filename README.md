@@ -158,15 +158,24 @@ Our program takes in a file with the users sorted recorded grades.
 Each line begins with the category name (i.e.) followed by the grade for Lab 1, then Lab 2, etc.
 The lines should be input in the order of Labs, Assignments, Projects, and then Final.
 
-### **Warning!**
-
-The user must fill any currently missing grades with a 0 or the program will not properly read in and weight grades. An example of a valid data file can be read below:
-
 ```
 Labs 25 19 20 21 22 23 20 17
 Assignments 50 30 40 23 41
 Projects 140 340
 Final 87
+```
+
+### **Warning!**
+
+The user must fill any currently missing grades with a 0 or the program will not properly read in and weight grades.
+The grades are read in as up to 8 labs, 5 assignments, 2 projects, and 1 final exam.
+The following is a valid example of a data file with 0s input for missing grades:
+
+```
+Labs 25 19 20 21 0 0 0 0
+Assignments 50 30 40 0 0
+Projects 140 0
+Final 0
 ```
 
 # Command Line Arguments

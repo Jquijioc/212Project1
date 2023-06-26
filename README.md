@@ -155,23 +155,29 @@ flowchart TD
 ## Instructions on Input & Compilation
 
 Our program takes in a file with the users sorted recorded grades.
-Each line starts with the category name, such as Labs, followed by the grade for Lab 1, then Lab 2, etc.
+Each line begins with the category name (i.e.) followed by the grade for Lab 1, then Lab 2, etc.
 The lines should be input in the order of Labs, Assignments, Projects, and then Final.
 
 ### **Warning!**
 
-The user must fill any currently missing grades with a 0 or the program will not properly read in and weight grades. An example of a working data file can be read below:
+The user must fill any currently missing grades with a 0 or the program will not properly read in and weight grades. An example of a valid data file can be read below:
 
-![datafile](https://github.com/Jquijioc/212Project1/blob/main/samplePics/ExampleData.jpg)
+```
+Labs 25 19 20 21 22 23 20 17
+Assignments 50 30 40 23 41
+Projects 140 340
+Final 87
+```
 
 # Command Line Arguments
 
-The program's command line arguments follow the form of
+The program's command line arguments follow the form of:
 
 ```
 g++ main.cpp gradebook.cpp -o test && ./test dataset
 ```
-where "dataset" is the name of the file with the user's data
+
+where "dataset" is the name of the file with the user's data.
 
 # Function and Method Calls
 
@@ -184,11 +190,11 @@ After inputting the requisite command line argument with the desired file name o
 
 ## Example Outputs
 
-Sample output of user requesting 1 individual grade, then 1 for Lab, then the third Lab grade:
+A sample output of user requesting 1 individual grade, then 1 for lab, then the third lab grade:
 
 ![example output](https://github.com/Jquijioc/212Project1/blob/main/samplePics/Output1.jpg)
 
-Sample output of user requesting all grades and course overall:
+A sample output of user requesting all grades and course overall:
 
 ![example output2](https://github.com/Jquijioc/212Project1/blob/main/samplePics/output2.jpg)
 

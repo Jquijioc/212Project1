@@ -190,11 +190,11 @@ After inputting the requisite command line argument with the desired file name o
 
 ## Example Outputs
 
-A sample output of user requesting 1 individual grade, then 1 for lab, then the third lab grade:
+1. A sample output of user requesting 1 individual grade, then 1 for lab, then the third lab grade:
 
 ![example output](https://github.com/Jquijioc/212Project1/blob/main/samplePics/Output1.jpg)
 
-A sample output of user requesting all grades and course overall:
+2. A sample output of user requesting all grades and course overall:
 
 ![example output2](https://github.com/Jquijioc/212Project1/blob/main/samplePics/output2.jpg)
 

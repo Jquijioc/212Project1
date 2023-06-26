@@ -1,5 +1,5 @@
 # 212 Project 1
-Project members: Summer Lizarda, Jonathan Ok, Joseph Quijioc, Amer al Sayari
+Project Members: Summer Lizarda, Jonathan Ok, Joseph Quijioc, Amer al Sayari
 
 ## Summary of the Project
 

@@ -72,6 +72,35 @@ void Gradebook::getCategoryTotal(){
 //add all the categorys together
 //print
 
+
+
+void Gradebook::totalGrade(int cat)
+(The totalGrade function gets both the *weighted total points of a category and the overall total of that category.)
+// Get the weighted averages for each category
+//creat a vector to hold total category points and total category
+//
+//
+//
+//
+//
+//
+//
+
+float Gradebook::total(int cat){
+(this function returns the unweighted points for each category depending on the category requeste)
+// switch statments to choose category needed
+// int total to hold the points
+// for loop with size of chosen category 
+// add all the geades in the category to total
+// return total points from category
+
+void Gradebook::getIndividual(int category) {
+(thisfunction returns the individual grade upon request of a category and a certain number from that category)
+// function takes in category choosen
+// find index needed from the choosen category index = user input - 1
+// check if the requested grade exists 
+// cout the grade requested
+
 ```
 
 # Flowcharts

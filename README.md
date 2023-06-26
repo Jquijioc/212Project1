@@ -158,9 +158,9 @@ Our program takes in a file with the users sorted recorded grades.
 Each line starts with the category name, such as Labs, followed by the grade for Lab 1, then Lab 2, etc.
 The lines should be input in the order of Labs, Assignments, Projects, and then Final.
 
-### **Warning**
+### **Warning!**
 
-The user must fill any missing grades with a zero or else the program will not work. An example of a working data file below:
+The user must fill any currently missing grades with a 0 or the program will not properly read in and weight grades. An example of a working data file can be read below:
 
 ![datafile](https://github.com/Jquijioc/212Project1/blob/main/samplePics/ExampleData.jpg)
 
@@ -170,7 +170,6 @@ The program's command line arguments follow the form of
 
 ```
 g++ main.cpp gradebook.cpp -o test && ./test dataset
-
 ```
 where "dataset" is the name of the file with the user's data
 
@@ -179,7 +178,7 @@ where "dataset" is the name of the file with the user's data
 ## Runtime Instructions
 
 Running this program is rather straightforward.
-After running the correct commands with the desired file name, users will be presented with a menu requesting the user to type an integer and press enter to request the grade/s they wish to see.
+After inputting the requisite command line argument with the desired file name of the grade data, users will be prompted to input integers to request particualr course grades, categorical grades, and/or individual grade(s) they wish to see.
 
 ![examplemenu](https://github.com/Jquijioc/212Project1/blob/main/samplePics/ExampleMenu.jpg)
 
@@ -192,7 +191,6 @@ Sample output of user requesting 1 individual grade, then 1 for Lab, then the th
 Sample output of user requesting all grades and course overall:
 
 ![example output2](https://github.com/Jquijioc/212Project1/blob/main/samplePics/output2.jpg)
-
 
 ### Contributions Table
 

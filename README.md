@@ -3,12 +3,15 @@ Project members: Summer Lizarda, Jonathan Ok, Joseph Quijioc, Amer al Sayari
 
 ## Summary of the Project
 
-The premise of this project, from the assignment itself, is to "build a gradebook application to interpret course grades into categorical totals and semester final grades."
-
-The viewable outputs of the program should include:
-files: main.cpp, gradebook.cpp, gradebook.h
-
-
+The premise of this project is to build a gradebook application to interpret course grades into individual grades, categorical totals and semester final grades.
+More specifically, the project required our program to be able to output the grade/s in several different configurations, which were as follows:
+1. Individual: returns individual deliverable name and grade
+2. Category: returns all grades from category and category total
+3. Course:
+   * all grades in their respective categories and course overall
+   * only category totals and course overall
+   * only course overall
+    
 ## Planning of the Project
 
 Pseudocode For Main.cpp

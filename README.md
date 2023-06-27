@@ -263,3 +263,8 @@ After inputting the requisite command line argument with the file name of the gr
 | | getCategoryNumber() | 6/22/23 | 6/23/23 | Amer al Sayari|
 | | video | 6/23/23 | 6/23/23 || Amer al Sayari|
 | | helper functoins to reduce repeated code | 6/23/23 | 6/23/23 | Amer al Sayari|
+
+
+## Video 
+
+https://youtu.be/SLYq713VRdQ

@@ -40,6 +40,34 @@ int main(int argc, char* argv[]){
 }
 
 ```
+## gradebook.h
+
+```
+#include <iostream>
+#include <vector>
+
+class Gradebook{
+    private:
+        std::vector<int> labGrades;
+        std::vector<int> assignmentGrades;
+        std::vector<int> projectGrades;
+        std::vector<int> examGrades;
+        std::vector<std::string> Course;
+    public:
+        Gradebook(std::vector<int> labGrades, std::vector<int> assignmentGrades, std::vector<int> projectGrades, std::vector<int> examGrades);
+        ~Gradebook();
+        int getCategoryNumber();
+        void print(); 
+        float total(); 
+        float totalGrade(); 
+        std::vector<float> GetWeightGrades();
+        void printGrades(int category); 
+        void getIndividual(int category); 
+        void getCategoryTotal(); 
+        void getCourseTotal(); 
+};
+```
+
 ## gradebook.cpp
 
 ```

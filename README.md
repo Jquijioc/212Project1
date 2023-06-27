@@ -236,11 +236,11 @@ After inputting the requisite command line argument with the file name of the gr
 ![example output2](https://github.com/Jquijioc/212Project1/blob/main/samplePics/output2.jpg)
 
 
-## Video 
+# Video 
 
 [![Project Explanation](https://img.youtube.com/vi/SLYq713VRdQ/0.jpg)](https://www.youtube.com/watch?v=SLYq713VRdQ)
 
-### Contributions Table
+# Contributions Table
 
 | Name | Contribution | Started | Ended | Finished by |
 | ---- | ------ | ------ | ------ | ------ |

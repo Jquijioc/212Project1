@@ -72,8 +72,6 @@ void Gradebook::getCategoryTotal(){
 //add all the categorys together
 //print
 
-
-
 std::vector<float> Gradebook::totalGrade(int cat)
 (The totalGrade function gets both the *weighted total points of a category and the overall total of that category.)
 // use a vector to hold total category points and total category
@@ -83,7 +81,6 @@ std::vector<float> Gradebook::totalGrade(int cat)
 // multiply the weighted average by the category size and 100 to get the total
 // sum the total points
 // return vector
-
 
 float Gradebook::total(int cat){
 (this function returns the unweighted points for each category depending on the category requeste)

@@ -180,7 +180,7 @@ flowchart TD
 
 
 ```
-## Instructions on Input & Compilation
+# Instructions on Input & Compilation
 
 Our program takes in a file with the users sorted recorded grades.
 Each line begins with the category name (i.e.) followed by the grade for Lab 1, then Lab 2, etc.
@@ -234,7 +234,6 @@ After inputting the requisite command line argument with the file name of the gr
 2. A sample output of user requesting all grades and course overall:
 
 ![example output2](https://github.com/Jquijioc/212Project1/blob/main/samplePics/output2.jpg)
-
 
 # Video 
 

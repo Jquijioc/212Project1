@@ -262,7 +262,7 @@ After inputting the requisite command line argument with the file name of the gr
 
 # Video 
 
-[![Project Explanation](https://img.youtube.com/vi/SLYq713VRdQ/0.jpg)](https://www.youtube.com/watch?v=SLYq713VRdQ)
+[![Project Explanation](https://img.youtube.com/vi/vrBC9cMadGE/0.jpg)](https://www.youtube.com/watch?v=vrBC9cMadGE)
 
 # Contributions Table
 
